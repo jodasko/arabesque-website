@@ -1,0 +1,13 @@
+<section id="hero" class="hero">
+  <div class="hero__content">
+    <h1 class="hero__title">
+      <span *ngFor="let line of titleLines; let last = last">
+        {{ line | translate }}<br *ngIf="!last" />
+      </span>
+    </h1>
+    <p class="hero__subtitle">{{ "HERO_SUBTITLE" | translate }}</p>
+    <div class="hero__underConstruction-wrapper" style="display: none">
+      <p class="hero__underConstruction">{{ "STAY_TUNED" | translate }}</p>
+    </div>
+  </div>
+</section>

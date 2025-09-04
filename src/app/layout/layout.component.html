@@ -1,0 +1,3 @@
+<app-header *ngIf="scrollService.getCurrentUrl() !== '/contact'"></app-header>
+<router-outlet></router-outlet>
+<app-footer *ngIf="scrollService.getCurrentUrl() !== '/contact'"></app-footer>

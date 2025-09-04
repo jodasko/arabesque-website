@@ -1,1 +1,154 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
+
+/* ──────────────────────────── Base (mobile-first) ──────────────────────────── */
+html,
+body {
+  scroll-behavior: auto !important;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: $Navy;
+  color: $Slate !important;
+  line-height: 1.3;
+  font-size: 20px;
+}
+
+.section-box {
+  padding: 130px 0;
+}
+
+.bottom {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.section {
+  scroll-margin-top: 80px;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  padding: 1.5rem 1rem; /* mobile padding */
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-font {
+  font-family: $CodeFont;
+}
+
+.main-btn {
+  color: $Green;
+  background-color: transparent;
+  border: 1px solid $Green;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: $CodeFont;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  padding: 1.25rem 1.75rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba(100, 255, 218, 0.07);
+    outline: none;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $Green;
+  }
+}
+
+/* ───────────────────────── Desktop breakpoints (min-width) ───────────────────────── */
+
+@media (min-width: 376px) {
+  /* used to be max-width: 376px */
+  /* no rules here originally */
+}
+
+@media (min-width: 480px) {
+  /* used to be max-width: 480px */
+  /* no rules here originally */
+}
+
+@media (min-width: 768px) {
+  /* formerly max-width: 768px */
+  body {
+    font-size: 18px;
+  }
+
+  .banner h2,
+  .banner h3,
+  .big-title {
+    font-size: 60px !important;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 880px) {
+  /* formerly (max-width: 880px - max-width:992px) */
+  .container {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* formerly (min-width: 992px and max-width:1100px) */
+  .container {
+    max-width: 700px;
+  }
+
+  .banner h2,
+  .banner h3,
+  .big-title {
+    font-size: 70px !important;
+  }
+
+  .big-subtitle {
+    font-size: 14px !important;
+  }
+}
+
+@media (min-width: 1100px) {
+  /* formerly (min-width:1100px and max-width:1300px) */
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1300px) {
+  /* above your largest desktop */
+  .container {
+    max-width: 950px;
+  }
+}
+
+/* [optional] finally import Bootstrap if needed */
+@import "bootstrap/scss/bootstrap";

@@ -1,0 +1,175 @@
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.contact {
+  background-color: #fffef6;
+  color: #ffffff;
+  padding: 4rem 1rem;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__intro {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a6665;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: #4a6665;
+  }
+
+  &__info {
+    background-color: #131f1a;
+    padding: 2rem;
+    border-radius: 8px;
+    min-height: 75vh;
+    padding: 1.5rem 1rem;
+    font-family: "Roboto", sans-serif;
+    background: url(/assets/images/tpl-banner.jpg) center / cover no-repeat;
+    padding-top: 245px;
+  }
+
+  &__label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__email a {
+    margin-bottom: 1.5rem;
+    color: #212121;
+    font-weight: bolder;
+    background-color: #fff;
+    opacity: 0.4;
+    padding: 7px;
+    height: 40px;
+
+    &:hover {
+      color: #43a89a;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    font-weight: lighter;
+    background-color: #fff;
+    opacity: 0.4;
+    padding: 5px;
+    a {
+      color: #212121;
+      &:hover {
+        color: #43a89a;
+      }
+    }
+  }
+
+  &__logo a {
+    text-decoration: none;
+    span {
+      font-size: 1.35rem;
+      line-height: 1;
+      color: #fff;
+      transition: color 0.5s ease-out;
+      &:hover {
+        color: #43a89a;
+      }
+    }
+  }
+
+  &__group {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  &__label,
+  &__question {
+    font-size: 1.35rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #4a6665;
+
+    &-mandatory {
+      margin-top: 1rem;
+      color: #fe5a1e;
+      font-weight: bold;
+    }
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #4fc8b9;
+    color: #4fc8b9;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+
+    &::placeholder {
+      color: #aaa;
+    }
+  }
+
+  &__submit {
+    background-color: transparent;
+    border: 1px solid #4a6665;
+    color: #4a6665;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgba(179, 255, 96, 0.1);
+    }
+  }
+
+  &__error {
+    color: #ff5f5f;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+
+  &__success {
+    margin-top: 1rem;
+    color: #4a6665;
+    font-weight: bold;
+  }
+
+  &__counter {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #4a6665;
+    margin-top: 0.25rem;
+
+    &.warning {
+      color: #ff5f5f;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact__group {
+    margin-top: 0;
+  }
+  .contact__email a {
+    font-size: 0.85rem;
+  }
+}

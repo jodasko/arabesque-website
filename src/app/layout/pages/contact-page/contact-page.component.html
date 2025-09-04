@@ -1,0 +1,201 @@
+<section class="contact">
+  <div class="container contact__container">
+    <div class="contact__intro">
+      <h2 class="contact__title">{{ "CONTACT_PAGE_TITLE" | translate }}</h2>
+      <p class="contact__subtitle">
+        {{ "CONTACT_PAGE_SUBTITLE" | translate }}
+      </p>
+    </div>
+
+    <div class="contact__content row">
+      <div class="me-4 col-12 col-md-4 contact__info">
+        <div class="contact__logo mb-4">
+          <a [routerLink]="['/']">
+            <img
+              src="/assets/images/logo.png"
+              alt="{{ 'CONTACT_PAGE_COMPANY_NAME' | translate }}"
+              height="36"
+            />
+            <span class="ms-2">{{
+              "CONTACT_PAGE_COMPANY_NAME" | translate
+            }}</span>
+          </a>
+        </div>
+        <div class="contact__box">
+          <h6 class="contact__label">{{ "CONTACT_PAGE_EMAIL" | translate }}</h6>
+          <p class="contact__email">
+            <a
+              class="nav-link"
+              href="mailto:{{ 'CONTACT_PAGE_CSSTUDIO_EMAIL' | translate }}"
+              >{{ "CONTACT_PAGE_CSSTUDIO_EMAIL" | translate }}</a
+            >
+          </p>
+          <h6 class="contact__label mt-4">
+            {{ "CONTACT_PAGE_CSSTUDIO_SOCIAL_LINKS" | translate }}
+          </h6>
+          <div class="contact__social">
+            <a
+              class="contact__icon"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_github',
+                  'footer',
+                  'github'
+                )
+              "
+              href="https://github.com/jodasko"
+              target="_blank"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              class="contact__icon"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_linkedin',
+                  'footer',
+                  'github'
+                )
+              "
+              href="https://www.linkedin.com/in/carlossalazar10/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <form
+          id="contactForm"
+          [formGroup]="contactForm"
+          (ngSubmit)="onSubmit()"
+          class="contact__form"
+        >
+          <div class="contact__group">
+            <label for="fullname" class="contact__question"
+              >{{ "CONTACT_PAGE_QUESTION_FULLNAME" | translate }}
+              <span class="contact__question-mandatory">*</span></label
+            >
+            <input
+              name="fullname"
+              id="fullname"
+              class="contact__input"
+              type="text"
+              formControlName="name"
+              placeholder="{{
+                'CONTACT_PAGE_QUESTION_FULLNAME_PLACEHOLDER' | translate
+              }}"
+              autocomplete="off"
+            />
+            <div
+              *ngIf="submitted && f.name.errors?.required"
+              class="contact__error"
+            >
+              {{ "CONTACT_PAGE_QUESTION_FULLNAME_ERROR_01" | translate }}
+            </div>
+            <div
+              *ngIf="submitted && f.name.errors?.pattern"
+              class="contact__error"
+            >
+              {{ "CONTACT_PAGE_QUESTION_FULLNAME_ERROR_02" | translate }}
+            </div>
+          </div>
+
+          <div class="contact__group">
+            <label for="email" class="contact__question"
+              >{{ "CONTACT_PAGE_QUESTION_EMAIL" | translate }}
+              <span class="contact__question-mandatory">*</span></label
+            >
+            <input
+              name="email"
+              id="email"
+              class="contact__input"
+              type="email"
+              formControlName="email"
+              placeholder="{{
+                'CONTACT_PAGE_QUESTION_EMAIL_PLACEHOLDER' | translate
+              }}"
+              autocomplete="off"
+            />
+            <div
+              *ngIf="submitted && f.email.errors?.required"
+              class="contact__error"
+            >
+              {{ "CONTACT_PAGE_QUESTION_EMAIL_ERROR_01" | translate }}
+            </div>
+            <div
+              *ngIf="submitted && f.email.errors?.email"
+              class="contact__error"
+            >
+              {{ "CONTACT_PAGE_QUESTION_EMAIL_ERROR_02" | translate }}
+            </div>
+          </div>
+
+          <div class="contact__group">
+            <label for="company" class="contact__question">{{
+              "CONTACT_PAGE_QUESTION_COMPANY" | translate
+            }}</label>
+            <input
+              id="company"
+              name="company"
+              class="contact__input"
+              type="text"
+              formControlName="company"
+              placeholder="{{
+                'CONTACT_PAGE_QUESTION_COMPANY_PLACEHOLDER' | translate
+              }}"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="contact__group">
+            <label for="message" class="contact__label"
+              >{{ "CONTACT_PAGE_QUESTION_MESSAGE" | translate }}
+              <span class="contact__question-mandatory">*</span></label
+            >
+            <textarea
+              id="message"
+              name="message"
+              formControlName="message"
+              rows="5"
+              class="contact__input"
+              placeholder="{{
+                'CONTACT_PAGE_QUESTION_MESSAGE_PLACEHOLDER' | translate
+              }}"
+              (input)="messageLength = f.message.value.length"
+            ></textarea>
+            <div *ngIf="submitted && f.message.errors" class="contact__error">
+              <span *ngIf="f.message.errors?.required">{{
+                "CONTACT_PAGE_QUESTION_MESSAGE_ERROR_01" | translate
+              }}</span>
+              <span *ngIf="f.message.errors?.maxlength">{{
+                "CONTACT_PAGE_QUESTION_MESSAGE_ERROR_02" | translate
+              }}</span>
+              <span *ngIf="f.message.errors?.pattern">{{
+                "CONTACT_PAGE_QUESTION_MESSAGE_ERROR_03" | translate
+              }}</span>
+            </div>
+            <div
+              class="contact__counter"
+              [ngClass]="{ warning: messageLength > 380 }"
+            >
+              {{ messageLength || 0
+              }}{{ "CONTACT_PAGE_QUESTION_MESSAGE_MAX" | translate }}
+            </div>
+          </div>
+          <div class="contact__group">
+            <button type="submit" class="contact__submit">
+              {{ "CONTACT_PAGE_FORM_SUBMIT_CTA" | translate | uppercase }}
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+          <div *ngIf="submitMessage" class="contact__success">
+            {{ submitMessage | translate }}
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

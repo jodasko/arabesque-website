@@ -1,0 +1,13 @@
+<section id="page" class="page">
+  <div class="page__content">
+    <h1 class="page__title text-start">
+      <span *ngFor="let line of titleLines; let last = last">
+        {{ line | translate }}<br *ngIf="!last" />
+      </span>
+    </h1>
+    <div class="page__gradient"></div>
+    <p class="page__subtitle text-start">
+      {{ "PAGE_HERO_SUBTITLE" | translate }}
+    </p>
+  </div>
+</section>

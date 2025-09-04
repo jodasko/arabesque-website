@@ -1,0 +1,58 @@
+<nav
+  app-sticky-nav
+  class="navbar navbar-expand-lg fixed-top bg-transparent"
+  id="navbar"
+  [ngClass]="{
+    'bg-transparent': !isMenuOpen || !isMobile,
+    'bg-colored': isMenuOpen && isMobile
+  }"
+>
+  <div class="container">
+    <a class="navbar-brand fw-bold" (click)="scrollToTop()">
+      <img src="assets/images/logo.png" alt="SereniA" height="58" />
+    </a>
+
+    <button
+      class="navbar-toggler navbar-dark"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="onToggleMenu()"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-3 text-end me-2">
+        <li class="nav-item" *ngFor="let link of navLinks">
+          <a
+            class="nav-link underline"
+            [ngClass]="{ active: activeSection === link.id }"
+            (click)="onScrollTo(link.id)"
+          >
+            {{ link.label | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link underline" [routerLink]="['/contact']">{{
+            "NAV_MENU_5" | translate
+          }}</a>
+        </li>
+        <li class="navbar-lang">
+          <select
+            [value]="language"
+            (change)="onSwitchLanguage($event.target.value)"
+            class=""
+            aria-label="Language"
+          >
+            <option value="en">{{ "en" | uppercase }}</option>
+            <option value="fr">{{ "fr" | uppercase }}</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

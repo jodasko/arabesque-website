@@ -1,0 +1,73 @@
+<footer class="footer">
+  <div>
+    <ul class="footer-left-bar d-none d-md-block">
+      <!-- TODO: CHECK OUT GITHUB PUBLIC CODE -->
+      <li>
+        <a
+          (click)="
+            analyticsService.sendAnalyticEvent(
+              'click_github',
+              'footer',
+              'github'
+            )
+          "
+          href="#"
+          target="_blank"
+        >
+          <i class="fab fa-github me-3"></i>
+        </a>
+      </li>
+      <li>
+        <a
+          (click)="
+            analyticsService.sendAnalyticEvent(
+              'click_linkedin',
+              'footer',
+              'github'
+            )
+          "
+          href="#"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Tagline + CTA -->
+  <div class="footer__contact">
+    <p class="footer__tagline">{{ "FOOTER_TAGLINE" | translate }}</p>
+    <a [routerLink]="['/contact']" class="footer__cta" aria-label="Contact us">
+      {{ "FOOTER_CTA" | translate }}
+    </a>
+  </div>
+
+  <!-- Divider -->
+  <hr class="footer__divider" />
+
+  <!-- Brand + Nav -->
+  <div class="footer__bottom">
+    <div class="footer__brand">
+      <img src="/assets/images/logo.png" alt="CS Studio" height="36" />
+      <span class="footer__brand-text">{{ "FOOTER_LOGO" | translate }}</span>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer navigation">
+      <ul role="list">
+        <li class="nav-item" *ngFor="let link of navLinks">
+          <a
+            class="nav-link"
+            [ngClass]="{ active: activeSection === link.id }"
+            (click)="onScrollTo(link.id)"
+          >
+            {{ link.label | translate }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Copyright -->
+  <p class="footer__copy">{{ "FOOTER_ALLRIGHTS" | translate }} | {{ year }}</p>
+</footer>

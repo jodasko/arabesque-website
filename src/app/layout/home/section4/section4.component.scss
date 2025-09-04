@@ -1,0 +1,113 @@
+/* Breakpoints map */
+$bp: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+);
+
+/* Mixin for media queries */
+@mixin mq($key) {
+  @media (min-width: map-get($bp, $key)) {
+    @content;
+  }
+}
+
+/* Host */
+:host {
+  display: block;
+}
+
+/* ─────────────────────────────  State of Art  ─────────────────────────────────────────────── */
+.section4 {
+  position: relative;
+  min-height: 50vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+  align-items: center;
+}
+
+/* Base */
+.section4__container {
+  font-family: "Roboto", sans-serif;
+  padding: 4rem 1rem 2rem 1rem; // top space, banner has own height
+  color: #000;
+  text-align: center;
+}
+
+/* ─── Head section ─────────────────────────────────────────────────────── */
+.section4__super {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.section4__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section4__text {
+  max-width: 42rem;
+  margin: 1.25rem auto 2.5rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  text-align: justify;
+
+  @include mq(sm) {
+    font-size: 1rem;
+  }
+}
+
+/* ─── Banner (striped background) ───────────────────────────────────────── */
+.section4__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 300px; // mobile
+  // background: url("/assets/images/ccd-01.png") center / cover no-repeat;
+  width: 100%;
+
+  /* Dim overlay to boost text contrast */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Pillars list overlays banner */
+.section4__pillars {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column; // stacked on phones
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+
+  @include mq(md) {
+    flex-direction: row; // three across on ≥768 px
+  }
+}
+
+.section4__pillar {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
+}
