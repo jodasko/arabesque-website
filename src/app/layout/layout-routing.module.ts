@@ -2,7 +2,19 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from '../layout/home/home.component';
 
 export const layoutRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    component: HomeComponent,
+    data: {
+      seo: {
+        title: 'arabesque menuiserie',
+        description: 'carpinteria, pintura y mucho mas',
+        canonicalPath: '/',
+        type: 'website',
+        keywords: ['carpinteria', 'pintura', 'bello', 'todo'],
+      },
+    },
+  },
   {
     path: 'pageOne',
     loadChildren: () =>

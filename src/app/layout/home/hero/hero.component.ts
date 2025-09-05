@@ -7,7 +7,10 @@ import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements OnInit {
+  readonly image = 'bg-hero';
+  readonly imageExt = 'png';
   readonly titleLines = ['HERO_TITLE', 'HERO_TITLE_2'];
+  readonly subTitle = 'HERO_SUBTITLE';
 
   constructor(public analyticsService: AnalyticsService) {}
 

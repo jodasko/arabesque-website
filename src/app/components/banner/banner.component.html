@@ -1,0 +1,20 @@
+<div
+  class="banner"
+  [style.backgroundImage]="
+    'url(/assets/images/' + bgImage + '.' + imageExt + ')'
+  "
+>
+  <div class="banner__content">
+    <h1 class="banner__title">
+      <span *ngFor="let line of title; let last = last">
+        {{ line | translate }}<br *ngIf="!last" />
+      </span>
+    </h1>
+    <p class="banner__subtitle">{{ subTitle | translate }}</p>
+    <div *ngIf="isUnderConstruction" class="hero__underConstruction-wrapper">
+      <p class="banner__underConstruction">
+        {{ underConstructionText | translate }}
+      </p>
+    </div>
+  </div>
+</div>

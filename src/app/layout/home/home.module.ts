@@ -13,10 +13,7 @@ import { Section1Component } from './section1/section1.component';
 import { Section2Component } from './section2/section2.component';
 import { Section3Component } from './section3/section3.component';
 import { Section4Component } from './section4/section4.component';
-// import { Section1Component } from './studio/studio.component';
-// import { WorkComponent } from './work/work.component';
-// import { ProcessComponent } from './section4/section4.component';
-// import { ServicesComponent } from './section3/section3.component';
+import { BannerComponent } from '../../components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +31,7 @@ import { Section4Component } from './section4/section4.component';
     CarouselModule,
     TranslateModule,
     SharedModule,
+    BannerComponent,
   ],
   exports: [HomeComponent],
 })
