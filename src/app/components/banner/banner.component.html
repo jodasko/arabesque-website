@@ -1,16 +1,25 @@
-<div
-  class="banner"
-  [style.backgroundImage]="
-    'url(/assets/images/' + bgImage + '.' + imageExt + ')'
-  "
->
-  <div class="banner__content">
-    <h1 class="banner__title">
-      <span *ngFor="let line of title; let last = last">
+<div class="banner" [ngStyle]="backgroundStyle">
+  <div class="banner__content d-flex flex-column justify-content-center w-100">
+    <!-- TITLE -->
+    <div class="banner__title">
+      <div *ngFor="let line of title; let last = last">
         {{ line | translate }}<br *ngIf="!last" />
-      </span>
-    </h1>
-    <p class="banner__subtitle">{{ subTitle | translate }}</p>
+      </div>
+    </div>
+    <!-- SUBTITLE -->
+    <p *ngIf="subTitle" class="banner__subtitle">
+      {{ subTitle | translate }}
+    </p>
+
+    <cta-button-component
+      class="mt-4 mt-5"
+      *ngIf="ctaButtonText"
+      [ctaButtonText]="ctaButtonText"
+    ></cta-button-component>
+
+    <card-component></card-component>
+
+    <!-- MESSAGE UNDERCONSTRUCTION -->
     <div *ngIf="isUnderConstruction" class="hero__underConstruction-wrapper">
       <p class="banner__underConstruction">
         {{ underConstructionText | translate }}

@@ -10,7 +10,7 @@ export class HeroComponent implements OnInit {
   readonly image = 'bg-hero';
   readonly imageExt = 'png';
   readonly titleLines = ['HERO_TITLE', 'HERO_TITLE_2'];
-  readonly subTitle = 'HERO_SUBTITLE';
+  readonly ctaButtonText = 'HERO_CTA';
 
   constructor(public analyticsService: AnalyticsService) {}
 

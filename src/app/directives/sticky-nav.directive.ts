@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 
 @Directive({
   selector: '[app-sticky-nav]',
+  standalone: true,
 })
 export class StickyNavDirective implements OnInit, OnDestroy {
   // @HostBinding('class.solid-navbar') isSolid = false;

@@ -1,0 +1,11 @@
+.btn-transparent {
+  background-color: transparent !important;
+  transition: background-color 0.3s, color 0.3s;
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+  &:hover {
+    background-color: rgb(241, 240, 240) !important;
+    color: #212121;
+  }
+}

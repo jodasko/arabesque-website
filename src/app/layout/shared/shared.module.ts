@@ -7,11 +7,17 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { StickyNavDirective } from 'src/app/directives/sticky-nav.directive';
+import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [StickyNavDirective, HeaderComponent, FooterComponent],
-  imports: [CommonModule, NgbModule, RouterModule, TranslateModule],
+  declarations: [HeaderComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    NgbModule,
+    RouterModule,
+    TranslateModule,
+    NavbarComponent,
+  ],
   exports: [HeaderComponent, FooterComponent],
 })
 export class SharedModule {}

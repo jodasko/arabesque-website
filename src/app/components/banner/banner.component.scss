@@ -19,6 +19,7 @@ $bp: (
 
 /* ─────────────────────────────  HERO  ─────────────────────────────────────────────── */
 .banner {
+  min-height: 60vh;
   position: relative;
   isolation: isolate; // ensures overlay doesn’t leak out
   min-height: 100vh;
@@ -27,11 +28,11 @@ $bp: (
   font-family: "Roboto", sans-serif;
   color: #fff;
   //   background: url("/assets/images/tpl-banner.jpg") bottom / cover no-repeat;
-  background-color: #fffef6;
+  // background-color: #fffef6;
   align-items: center;
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-position: bottom;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   /* Dark overlay for readability */
   &::before {
@@ -141,20 +142,21 @@ $bp: (
   /* CONTENT */
   &__content {
     flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 60rem;
-    gap: 1rem;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // max-width: 60rem;
+    // gap: 1rem;
+    padding-left: 110px;
   }
 
   &__title {
     font-weight: 700;
     line-height: 1.05;
     font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
-    margin: 0;
-    text-align: center;
     font-weight: lighter;
+    // margin: 0;
+    // text-align: center;
   }
 
   &__subtitle {

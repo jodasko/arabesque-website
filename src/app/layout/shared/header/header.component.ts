@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
   ];
   isMenuOpen = false;
   isMobile = false;
+  hasTagline = true;
 
   constructor(
     private languageService: LanguageService,
