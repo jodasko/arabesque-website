@@ -17,7 +17,32 @@
       [ctaButtonText]="ctaButtonText"
     ></cta-button-component>
 
-    <card-component></card-component>
+    <!-- <card-component></card-component> -->
+    <div
+      class="card-location__container d-flex flex-column justify-content-start w-100"
+    >
+      <div class="row">
+        <div class="col-2 g-0">
+          <div class="card card-location">
+            <div class="card-location__rail" aria-hidden="true">
+              <span class="card-location__rail-text">LOCATION</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 g-0">
+          <div class="card-body card-location__body">
+            <div class="row">
+              <div class="col-12">
+                <p class="card-location__subtitle mb-2">ALPES MARITIMES</p>
+              </div>
+              <div class="col-12">
+                <h3 class="card-location__title mb-0">Menuiserie sur mesure</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- MESSAGE UNDERCONSTRUCTION -->
     <div *ngIf="isUnderConstruction" class="hero__underConstruction-wrapper">
@@ -25,5 +50,6 @@
         {{ underConstructionText | translate }}
       </p>
     </div>
+    <ng-container *ngIf="isUnderConstruction"> </ng-container>
   </div>
 </div>

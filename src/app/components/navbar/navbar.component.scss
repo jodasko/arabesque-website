@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 select,
 select::picker(select) {
   appearance: base-select;
@@ -14,7 +16,7 @@ nav {
     background-color: transparent;
   }
   &.bg-colored {
-    background-color: #2e7a72; // or any desired color
+    background-color: $white; // or any desired color
     opacity: 0.9;
   }
 }
@@ -25,11 +27,11 @@ nav.navbar {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* solid after scroll */
     &__home,
     &__experiences {
-      background: #2e7a72 !important;
+      background: $white !important;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
       .nav-text {
-        color: #212121 !important; /* inverted link color */
+        color: $primaryColor !important; /* inverted link color */
       }
     }
   }
@@ -41,13 +43,13 @@ nav.navbar {
 
 .navbar-nav .nav-link {
   text-transform: uppercase;
-  color: #fff;
+  color: $white;
   font-stretch: extra-expanded;
   font-weight: lighter;
   cursor: pointer;
   &:hover,
   &.active {
-    color: #4cc6b9;
+    color: $secondColor;
   }
 
   &.underline {
@@ -55,7 +57,7 @@ nav.navbar {
     position: relative;
 
     &::after {
-      background: #4cc6b9;
+      background: $secondColor;
       bottom: 2px;
       content: "";
       display: block;
@@ -124,7 +126,7 @@ nav.navbar {
     &:checked {
       font-weight: lighter;
       background-color: #ffffff;
-      color: #4cc6b9;
+      color: $secondColor;
       width: 20px;
       border: 0;
     }
@@ -137,11 +139,11 @@ nav.navbar {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* solid after scroll */
     &__home,
     &__experiences {
-      background: #2e7a72 !important;
+      background: $white !important;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
       .nav-text {
-        color: #212121 !important; /* inverted link color */
+        color: $secondColor !important; /* inverted link color */
       }
     }
   }

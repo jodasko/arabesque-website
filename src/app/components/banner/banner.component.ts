@@ -1,13 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
 import { CtaButtonComponent } from '../cta-button/cta-button.component';
-import { CardComponent } from '../card/card.component';
+import { SHARED_STANDALONE_IMPORTS } from '../shared-standalone.imports';
 
 @Component({
   selector: 'banner-component',
   standalone: true,
-  imports: [CommonModule, TranslateModule, CtaButtonComponent, CardComponent],
+  imports: [...SHARED_STANDALONE_IMPORTS, CtaButtonComponent],
   templateUrl: './banner.component.html',
   styleUrl: './banner.component.scss',
 })

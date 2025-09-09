@@ -7,19 +7,25 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { SharedModule } from '../shared/shared.module';
+
+/*Components */
+import { BannerComponent } from '../../components/banner/banner.component';
+import { ArticleComponent } from 'src/app/components/article/article.component';
+import { CtaButtonComponent } from 'src/app/components/cta-button/cta-button.component';
 import { HomeComponent } from './home.component';
+
+/*Sections */
 import { HeroComponent } from './hero/hero.component';
-import { Section1Component } from './section1/section1.component';
+import { SectionServiceComponent } from './section-service/section-service.component';
 import { Section2Component } from './section2/section2.component';
 import { Section3Component } from './section3/section3.component';
 import { Section4Component } from './section4/section4.component';
-import { BannerComponent } from '../../components/banner/banner.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeroComponent,
-    Section1Component,
+    SectionServiceComponent,
     Section2Component,
     Section3Component,
     Section4Component,
@@ -32,6 +38,8 @@ import { BannerComponent } from '../../components/banner/banner.component';
     TranslateModule,
     SharedModule,
     BannerComponent,
+    ArticleComponent,
+    CtaButtonComponent,
   ],
   exports: [HomeComponent],
 })

@@ -1,0 +1,95 @@
+<section class="article1 container">
+  <div class="article1__content">
+    <div class="article1__heading">
+      <p *ngIf="headline" class="article1__headline">
+        {{ headline | translate }}
+        <span class="article1__arrow"
+          ><i class="bi bi-arrow-down-right"></i
+        ></span>
+      </p>
+      <h2 *ngIf="title" class="article1__title">
+        {{ title | translate }}
+      </h2>
+      <p *ngIf="text" class="article1__text">
+        {{ text | translate }}
+      </p>
+    </div>
+
+    <!-- TODO -->
+    <div class="article1__steps" style="display: none">
+      <img
+        src="assets/images/project-lifecycle.png"
+        alt="Approach Circle"
+        class="article1__circle"
+      />
+      <ul class="article1__list">
+        <li class="article1__item">
+          <h3 class="article1__step-title">
+            {{ "PAGE_SECTION_1_STEP_REVEAL_TITLE" | translate }}
+          </h3>
+          <p class="article1__step-desc">
+            {{ "PAGE_SECTION_1_STEP_REVEAL_CONCEPT" | translate }}
+          </p>
+        </li>
+        <li class="article1__item">
+          <h3 class="article1__step-title">
+            {{ "PAGE_SECTION_1_STEP_DESIGN_TITLE" | translate }}
+          </h3>
+          <p class="article1__step-desc">
+            {{ "PAGE_SECTION_1_STEP_DESIGN_CONCEPT" | translate }}
+          </p>
+        </li>
+        <li class="article1__item">
+          <h3 class="article1__step-title">
+            {{ "PAGE_SECTION_1_STEP_DELIVER_TITLE" | translate }}
+          </h3>
+          <p class="article1__step-desc">
+            {{ "PAGE_SECTION_1_STEP_DELIVER_CONCEPT" | translate }}
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<ng-container *ngIf="false">
+  <section class="section_1">
+    <div class="section_1__inner" data-aos="fade-up" data-aos-duration="1000">
+      <!-- Logo -->
+      <img
+        class="section_1__logo"
+        src="/assets/images/logo.png"
+        alt="CS Studio logo"
+        height="80"
+      />
+
+      <!-- Title & subtitle -->
+      <h2 class="section_1__title">{{ "SECTION_1_TITLE" | translate }}</h2>
+      <p class="section_1__subtitle">
+        {{ "SECTION_1_SUBTITLE" | translate }}
+      </p>
+
+      <!-- Description -->
+      <p class="section_1__desc" data-aos="fade-up" data-aos-duration="1000">
+        {{ "SECTION_1_BODY" | translate }}
+      </p>
+
+      <!-- Action buttons -->
+      <div
+        class="section_1__actions"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="section_1__cta"
+          >{{ "SECTION_1_CTA" | translate }}</a
+        >
+        <a routerLink="/" class="section_1__cta"
+          >{{ "SECTION_1_CTA" | translate }} 2</a
+        >
+      </div>
+    </div>
+  </section>
+</ng-container>

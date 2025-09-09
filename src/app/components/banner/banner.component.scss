@@ -182,3 +182,114 @@ $bp: (
     color: #212121;
   }
 }
+
+// ─────────────────────────────  LOCATION CARD  ─────────────────────────────────────────────── */
+
+.card-location__container {
+  width: 570px !important;
+  height: 160px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.card-location {
+  /* required size */
+  width: 100%;
+  max-width: 560px;
+  height: 155px;
+
+  /* layout */
+  display: flex; /* rail + body side-by-side */
+  align-items: stretch;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+  background-color: #f4f7fb;
+
+  /* left rail */
+  &__rail {
+    flex: 0 0 56px; /* fixed rail width */
+    background: #f4f7fb; /* soft blue/grey */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__rail-text {
+    display: inline-block;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    font-size: 0.64rem;
+    font-weight: 600;
+    letter-spacing: 0.35rem;
+    color: #8d98a6;
+    line-height: 1;
+    top: 40px;
+    position: relative;
+  }
+
+  /* card body */
+  &__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1.25rem; /* compact on mobile */
+    background: #fff; /* ensure contrast */
+    height: 155px;
+  }
+
+  &__subtitle {
+    margin: 0 0 0.35rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 0.42rem;
+    font-weight: 600;
+    color: #6b7380; /* muted text */
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 800;
+    font-size: 1rem !important; /* ~16px mobile */
+    line-height: 1.25;
+    color: #0f1222; /* near-black */
+  }
+}
+
+/* ===== Responsive refinements (mobile-first) ===== */
+@media (min-width: 576px) {
+  /* sm */
+  .card-location {
+    &__rail {
+      flex-basis: 64px;
+    }
+    &__body {
+      padding: 1.25rem 1.5rem;
+    }
+    &__title {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  /* lg */
+  .card-location {
+    &__rail {
+      flex-basis: 72px;
+    }
+    &__subtitle {
+      font-size: 0.8rem;
+      letter-spacing: 0.3rem;
+    }
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+}

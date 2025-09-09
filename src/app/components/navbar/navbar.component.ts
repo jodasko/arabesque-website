@@ -1,21 +1,19 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
 
 import { SupportedLang } from 'src/app/i18n/i18n.config';
 import { LanguageService } from 'src/app/services/language/language.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { StickyNavDirective } from 'src/app/directives/sticky-nav.directive';
+import { SHARED_STANDALONE_IMPORTS } from '../shared-standalone.imports';
 
 @Component({
   selector: 'navbar-component',
   standalone: true,
   imports: [
-    CommonModule,
+    ...SHARED_STANDALONE_IMPORTS,
     StickyNavDirective,
-    TranslateModule,
     RouterModule,
     CarouselModule,
   ],
@@ -24,22 +22,19 @@ import { StickyNavDirective } from 'src/app/directives/sticky-nav.directive';
 })
 export class NavbarComponent implements OnInit {
   @Input() logo?: string = 'logo';
+  @Input() logoTagline: string | null = null;
   @Input() imageExt?: 'jpg' | 'png' = 'png';
   @Input() alt?: string = 'logo';
   @Input() bgHighlight: string | null = '';
+  @Input() navLinks: NavLink[] = [];
+  @Input() sectionIds: string[] = [];
+  @Input() isMultilingual: boolean = false;
+  @Input() languages: string[] = [];
 
   language: string;
   activeSection: string = '';
-  sectionIds = ['hero', 'studio', 'work', 'services', 'process'];
-  navLinks = [
-    { id: 'menu1', label: 'NAV_MENU_1' },
-    { id: 'menu2', label: 'NAV_MENU_2' },
-    { id: 'menu3', label: 'NAV_MENU_3' },
-    { id: 'menu4', label: 'NAV_MENU_4' },
-  ];
   isMenuOpen = false;
   isMobile = false;
-  hasTagline = true;
 
   constructor(
     private languageService: LanguageService,
@@ -55,6 +50,10 @@ export class NavbarComponent implements OnInit {
       }
     });
     this.language = this.languageService.language;
+  }
+
+  get logoUrl(): string {
+    return `/assets/images/${this.logo}.${this.imageExt}`;
   }
 
   @HostListener('window:scroll', [])
@@ -78,10 +77,6 @@ export class NavbarComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  get logoUrl(): string {
-    return `/assets/images/${this.logo}.${this.imageExt}`;
-  }
-
   private activeSectionByScroll() {
     const scrollY = window.pageYOffset;
     let closestSection = '';
@@ -100,4 +95,9 @@ export class NavbarComponent implements OnInit {
       this.activeSection = closestSection;
     }
   }
+}
+
+interface NavLink {
+  id: string;
+  label: string;
 }

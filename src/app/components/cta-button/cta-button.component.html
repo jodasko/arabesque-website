@@ -1,3 +1,7 @@
-<button type="button" class="btn btn-light btn-lg btn-transparent px-5">
+<button
+  type="button"
+  class="btn btn-lg px-5 btn-radius"
+  [ngStyle]="{ 'background-color': backgroundColor }"
+>
   {{ ctaButtonText | translate | uppercase }}
 </button>

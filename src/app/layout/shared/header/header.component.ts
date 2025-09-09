@@ -1,7 +1,11 @@
-import { Component, OnInit, HostListener } from '@angular/core';
-import { LanguageService } from 'src/app/services/language/language.service';
+import { Component, OnInit } from '@angular/core';
 import { SupportedLang } from 'src/app/i18n/i18n.config';
-import { ScrollService } from 'src/app/services/scroll/scroll.service';
+import { TranslateService } from '@ngx-translate/core';
+
+interface NavLink {
+  id: string;
+  label: string;
+}
 
 @Component({
   selector: 'app-header',
@@ -9,72 +13,33 @@ import { ScrollService } from 'src/app/services/scroll/scroll.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  language: string;
-  activeSection: string = '';
-  sectionIds = ['hero', 'studio', 'work', 'services', 'process'];
-  navLinks = [
-    { id: 'menu1', label: 'NAV_MENU_1' },
-    { id: 'menu2', label: 'NAV_MENU_2' },
-    { id: 'menu3', label: 'NAV_MENU_3' },
-    { id: 'menu4', label: 'NAV_MENU_4' },
-  ];
-  isMenuOpen = false;
-  isMobile = false;
-  hasTagline = true;
+  navLinks: NavLink[] = [];
+  isMulilingual = true;
+  listLanguages: SupportedLang[] = ['en', 'fr', 'ar'];
+  tagline = 'NAV_TAGLINE';
+  companyName = 'COMPANY_NAME';
+  backgroundColor = '#ffffff';
 
-  constructor(
-    private languageService: LanguageService,
-    private scrollService: ScrollService
-  ) {}
+  constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
-    this.isMobile = window.innerWidth <= 991;
-    window.addEventListener('resize', () => {
-      this.isMobile = window.innerWidth <= 991;
-      if (!this.isMobile) {
-        this.isMenuOpen = false; // reset menu state on desktop
-      }
+    const keys = ['NAV_MENU_1', 'NAV_MENU_2', 'NAV_MENU_3', 'NAV_MENU_4'];
+    this.translate.get(keys).subscribe((transition) => {
+      this.navLinks = keys.map((k) => ({
+        id: this.slugify(transition[k]),
+        label: transition[k], // translated label
+      }));
     });
-    this.language = this.languageService.language;
   }
 
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    this.activeSectionByScroll();
+  get sectionIds(): string[] {
+    // derive dynamically from navLinks (first 3 only if you want)
+    return this.navLinks.slice(0, this.navLinks.length).map((link) => link.id);
   }
 
-  onScrollTo(el: string): void {
-    this.scrollService.scrollTo(el);
-  }
-
-  scrollToTop(): void {
-    this.scrollService.scrollToTop();
-  }
-
-  onSwitchLanguage(lang: SupportedLang): void {
-    this.languageService.setLanguage(lang);
-  }
-
-  onToggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
-  private activeSectionByScroll() {
-    const scrollY = window.pageYOffset;
-    let closestSection = '';
-    let minDistance = Number.MAX_VALUE;
-    for (const id of this.sectionIds) {
-      const el = document.getElementById(id);
-      if (el) {
-        const distance = Math.abs(el.offsetTop - scrollY);
-        if (distance < minDistance) {
-          minDistance = distance;
-          closestSection = id;
-        }
-      }
-    }
-    if (closestSection && closestSection !== this.activeSection) {
-      this.activeSection = closestSection;
-    }
+  private slugify(value: string): string {
+    return value
+      .toLowerCase()
+      .replace(/[^a-z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
   }
 }

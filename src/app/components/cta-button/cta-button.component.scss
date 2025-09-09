@@ -1,11 +1,13 @@
-.btn-transparent {
-  background-color: transparent !important;
+@import "../../../variables.scss";
+
+.btn-radius {
   transition: background-color 0.3s, color 0.3s;
-  color: white;
+  color: $white;
+  border: 1px solid $white;
   border-radius: 50px;
   font-size: 16px;
   &:hover {
-    background-color: rgb(241, 240, 240) !important;
+    background-color: $white;
     color: #212121;
   }
 }

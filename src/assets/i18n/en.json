@@ -1,12 +1,12 @@
 {
-  "COMPANY_NAME": "COMPANY NAME",
   "STAY_TUNED": "We're almost live. A new kind of devTech partner is coming — flexible, sharp, and ready to launch.🚀",
+  "COMPANY_NAME": "Arabesque",
 
-  "NAV_MENU_1": "menu 1",
-  "NAV_MENU_2": "menu 2",
-  "NAV_MENU_3": "menu 3",
-  "NAV_MENU_4": "menu 4",
-  "NAV_MENU_5": "menu 5",
+  "NAV_MENU_1": "services",
+  "NAV_MENU_2": "gallery",
+  "NAV_MENU_3": "about us",
+  "NAV_MENU_4": "contact",
+  "NAV_TAGLINE": "menuiserie",
 
   "FOOTER_NAV_MENU_1": "menu 1",
   "FOOTER_NAV_MENU_2": "menu 2",
@@ -19,6 +19,10 @@
   "HERO_TITLE": "Quality joinery for",
   "HERO_TITLE_2": "your home",
   "HERO_CTA": "schedule a call",
+
+  "SERVICE_SECTION_HEADLINE": "service",
+  "SERVICE_SECTION_TITLE": "we do it best.",
+  "SERVICE_SECTION_CTA": "view all services",
 
   "SECTION_1_TITLE": "SECTION_1 TITLE",
   "SECTION_1_SUBTITLE": "SECTION_1 SUBTITLE",
