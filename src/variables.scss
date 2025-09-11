@@ -1,28 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+/* Get Inter Font */
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var experimental", sans-serif;
+  }
+}
+// TODO
+// $Navy: #fffce8;
+// $LightNavy: #112240;
+// $LightestNavy: #303c55;
+// $Slate: #8892b0;
+// $LightSlate: #a8b2d1;
+// $LightestSlate: #4a6665;
+// $White: #e6f1ff;
+// $Green: #fe5a1e;
+// $GreenOpacity: rgba(100, 255, 218, 0.07);
+// TODO
 
-// TODO
-$CodeFont: Roboto, SF Mono, Fira Code, Fira Mono, Mono, Lucida Console, Monaco,
-  Monospace;
-$Navy: #fffce8;
-$LightNavy: #112240;
-$LightestNavy: #303c55;
-$Slate: #8892b0;
-$LightSlate: #a8b2d1;
-$LightestSlate: #4a6665;
-$White: #e6f1ff;
-$Green: #fe5a1e;
-$GreenOpacity: rgba(100, 255, 218, 0.07);
-// TODO
+// FONTS
+// $mainFont: Roboto, SF Mono, Fira Code, Fira Mono, Mono, Lucida Console, Monaco, Monospace;
+$mainFont: "Inter", sans-serif;
+$titleSizeH1: clamp(72px, -1.875rem + 7.083333333333333vw, 106px);
+$titleSiweh2: 52px;
+$ctaSizeText: 14px;
+$headlineSizeText: 14px;
+$subtileSize1: 28px;
+$subtileSizeText2: 18px;
+$contentSizeText: 16px;
 
 // COLORS
 $white: #ffffff;
 $black: #090b19;
-$grey: #cccccc;
+$grey: #d9d9d9;
+$greyLight: #d9d9d9;
 $creameWhite: #fffef6;
-$primaryColor: #5a4947;
+$mainColor: #5a4947;
 $secondColor: #81795a;
+$thirdColor: #f3f6fc;
 
 // ELEMENTS
-$headLine: $black;
-$title: $black;
+$headLineColor: $black;
+$titleColor: $black;
 $text: $grey;

@@ -1,5 +1,5 @@
 /* Roboto (only if not already global) */
-@import "./../../../../variables.scss";
+@import "src/variables.scss";
 
 /* Breakpoints */
 $bp-sm: 640px;
@@ -124,7 +124,7 @@ $white: #ffffff;
 
 /**Founder details**/
 footer {
-  color: $LightSlate;
+  color: orchid;
 
   .footer-left-bar li,
   .footer-right-bar li {
@@ -150,7 +150,7 @@ footer {
 
     i {
       font-size: 26px;
-      color: $LightSlate;
+      color: orchid;
       transition: color 0.3s ease-in-out;
       &:hover {
         color: #179ac1;
@@ -177,7 +177,7 @@ footer {
     }
 
     a {
-      font-family: $CodeFont;
+      font-family: $mainFont;
       font-size: 12px;
       -webkit-letter-spacing: 0.1em;
       -moz-letter-spacing: 0.1em;
@@ -188,7 +188,7 @@ footer {
       writing-mode: vertical-rl;
       margin: 20px auto;
       padding: 10px;
-      color: $LightSlate;
+      color: orchid;
     }
   }
 }

@@ -1,20 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.scss'],
+  selector: 'app-section-work',
+  templateUrl: './section-work.component.html',
+  styleUrls: ['./section-work.component.scss'],
 })
-export class HeroComponent implements OnInit {
-  bgImage = 'bg-hero.png';
+export class SectionWorkComponent implements OnInit {
+  bgImage = 'bg-work.png';
   bgColor: string | null = null;
-  title: string = 'HERO_TITLE';
+  title: string = 'SECTION_WORK_TITLE';
   titleLines = [];
-  oneTitle: string = '';
+  headline: string = 'SECTION_WORK_HEADLINE';
   subTitle: string = '';
-  underConstructionText: string = '';
-  ctaButtonText = 'HERO_CTA';
+  ctaButtonText = 'SECTION_WORK_CTA';
 
   constructor() {}
 
@@ -26,7 +24,7 @@ export class HeroComponent implements OnInit {
 
   private backgroundImage(): any {
     return {
-      backgroundImage: `url(/assets/images/${this.bgImage})`,
+      backgroundImage: `url(/assets/images/work/${this.bgImage})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',

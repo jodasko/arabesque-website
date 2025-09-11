@@ -5,7 +5,7 @@ import { CtaButtonComponent } from '../cta-button/cta-button.component';
 @Component({
   selector: 'article-component',
   standalone: true,
-  imports: [...SHARED_STANDALONE_IMPORTS, CtaButtonComponent],
+  imports: [...SHARED_STANDALONE_IMPORTS],
   templateUrl: './article.component.html',
   styleUrl: './article.component.scss',
 })

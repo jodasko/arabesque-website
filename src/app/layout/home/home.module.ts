@@ -9,16 +9,17 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 
 /*Components */
-import { BannerComponent } from '../../components/banner/banner.component';
-import { ArticleComponent } from 'src/app/components/article/article.component';
-import { CtaButtonComponent } from 'src/app/components/cta-button/cta-button.component';
+// import { BannerComponent } from '../../components/banner/banner.component';
+import { Banner2Component } from '../../components/banner2/banner2.component';
+import { ArticleComponent } from '../../components/article/article.component';
+import { CtaButtonComponent } from '../../components/cta-button/cta-button.component';
 import { HomeComponent } from './home.component';
 
 /*Sections */
 import { HeroComponent } from './hero/hero.component';
 import { SectionServiceComponent } from './section-service/section-service.component';
-import { Section2Component } from './section2/section2.component';
-import { Section3Component } from './section3/section3.component';
+import { SectionAboutComponent } from './section-about/section-about.component';
+import { SectionWorkComponent } from './section-work/section-work.component';
 import { Section4Component } from './section4/section4.component';
 
 @NgModule({
@@ -26,8 +27,8 @@ import { Section4Component } from './section4/section4.component';
     HomeComponent,
     HeroComponent,
     SectionServiceComponent,
-    Section2Component,
-    Section3Component,
+    SectionAboutComponent,
+    SectionWorkComponent,
     Section4Component,
   ],
   imports: [
@@ -37,7 +38,7 @@ import { Section4Component } from './section4/section4.component';
     CarouselModule,
     TranslateModule,
     SharedModule,
-    BannerComponent,
+    Banner2Component,
     ArticleComponent,
     CtaButtonComponent,
   ],

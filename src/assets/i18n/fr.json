@@ -3,10 +3,9 @@
   "COMPANY_NAME": "Arabesque",
 
   "NAV_MENU_1": "services",
-  "NAV_MENU_2": "about us",
-  "NAV_MENU_3": "work",
-  "NAV_MENU_4": "gallery",
-  "NAV_MENU_5": "contact",
+  "NAV_MENU_2": "gallery",
+  "NAV_MENU_3": "about us",
+  "NAV_MENU_4": "contact",
   "NAV_TAGLINE": "menuiserie",
 
   "FOOTER_NAV_MENU_1": "menu 1",
@@ -17,55 +16,22 @@
   "FOOTER_ALLRIGHTS": "© all rights reserved",
   "FOOTER_CTA": "ACTION CTA",
 
-  "HERO_TITLE": "Quality joinery for your home",
-  "HERO_TITLE_1": "Quality joinery for",
+  "HERO_TITLE": "Quality joinery for",
   "HERO_TITLE_2": "your home",
   "HERO_CTA": "schedule a call",
 
   "SERVICE_SECTION_HEADLINE": "service",
   "SERVICE_SECTION_TITLE": "we do it best.",
   "SERVICE_SECTION_CTA": "view all services",
-  "SERVICE_SECTION_DETAILS": [
-    {
-      "img": "demo-service.png",
-      "title": "Pose de cuisine",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
-    },
-    {
-      "img": "demo-service.png",
-      "title": "Pose de fenêtre alu et PVC",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
-    },
-    {
-      "img": "demo-service.png",
-      "title": "Pose de parquet intérieur",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
-    },
-    {
-      "img": "demo-service.png",
-      "title": "Pose de terrasse bois",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
-    },
-    {
-      "img": "demo-service.png",
-      "title": "Pose de placo-plâtre",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
-    }
-  ],
 
-  "SECTION_ABOUT_HEADLINE": "About arabesque",
-  "SECTION_ABOUT_SUBTITLE": "sayed hassan, menuisier",
-  "SECTION_ABOUT_CONTENT": "We're innovating the way companies reinvent their office spaces for the remote workforce.",
-  "SECTION_ABOUT_CARD_TITLE": "sayed hassan",
-  "SECTION_ABOUT_CARD_TITLE_1": "sayed",
-  "SECTION_ABOUT_CARD_TITLE_2": "hassan",
-  "SECTION_ABOUT_CARD_CONTENT_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum. Suspendisse potenti.",
-  "SECTION_ABOUT_CARD_CONTENT_2": "Vestibulum ut quam luctus, pharetra dui sed, rutrum felis. Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.",
-  "SECTION_ABOUT_CARD_FOOT": "antibes - alpes maritimes",
+  "SECTION_1_TITLE": "SECTION_1 TITLE",
+  "SECTION_1_SUBTITLE": "SECTION_1 SUBTITLE",
+  "SECTION_1_BODY": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
+  "SECTION_1_CTA": "CTA BUTTON",
 
-  "SECTION_WORK_HEADLINE": "Explore our work",
-  "SECTION_WORK_TITLE": "See what we can do together.",
-  "SECTION_WORK_CTA": "View All Projects",
+  "SECTION_2_TITLE": "SECTION_2 TITLE",
+  "SECTION_2_BODY": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
+  "SECTION_2_CTA": "CTA BUTTON",
 
   "SECTION_3_TITLE": "SECTION_3 TITLE",
   "SECTION_3_DETAILS": [

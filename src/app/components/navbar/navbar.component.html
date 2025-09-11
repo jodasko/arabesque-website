@@ -45,7 +45,7 @@
         <li class="nav-item" *ngFor="let link of navLinks">
           <a
             class="nav-link underline"
-            [ngClass]="{ active: activeSection === link.id }"
+            [ngClass]="{ active: activeSection === setIdFormat(link.id) }"
             (click)="onScrollTo(link.id)"
           >
             {{ link.label | translate }}

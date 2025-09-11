@@ -1,3 +1,7 @@
+@import "src/variables.scss";
+
+@import "src/variables.scss";
+
 /* Breakpoints map */
 $bp: (
   sm: 640px,
@@ -17,23 +21,17 @@ $bp: (
   display: block;
 }
 
-/* ─────────────────────────────  HERO  ─────────────────────────────────────────────── */
+/* ─────────────────────────────  BANNER 1  ─────────────────────────────────────────────── */
 .banner {
+  font-family: $mainFont;
   min-height: 60vh;
   position: relative;
   isolation: isolate; // ensures overlay doesn’t leak out
-  min-height: 100vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
-  font-family: "Roboto", sans-serif;
   color: #fff;
-  //   background: url("/assets/images/tpl-banner.jpg") bottom / cover no-repeat;
-  // background-color: #fffef6;
   align-items: center;
-  // background-position: bottom;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-
   /* Dark overlay for readability */
   &::before {
     content: "";
@@ -142,19 +140,13 @@ $bp: (
   /* CONTENT */
   &__content {
     flex: 1 1 auto;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // max-width: 60rem;
-    // gap: 1rem;
-    padding-left: 110px;
   }
 
   &__title {
+    font-size: $titleSizeH1;
     font-weight: 700;
     line-height: 1.05;
-    font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
-    font-weight: lighter;
+    font-weight: 300;
     // margin: 0;
     // text-align: center;
   }
@@ -185,15 +177,7 @@ $bp: (
 
 // ─────────────────────────────  LOCATION CARD  ─────────────────────────────────────────────── */
 
-.card-location__container {
-  width: 570px !important;
-  height: 160px;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-}
-
-.card-location {
+.card-work {
   /* required size */
   width: 100%;
   max-width: 560px;
@@ -208,31 +192,6 @@ $bp: (
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   background-color: #f4f7fb;
 
-  /* left rail */
-  &__rail {
-    flex: 0 0 56px; /* fixed rail width */
-    background: #f4f7fb; /* soft blue/grey */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__rail-text {
-    display: inline-block;
-    transform: rotate(-90deg);
-    transform-origin: center;
-    white-space: nowrap;
-    text-transform: uppercase;
-
-    font-size: 0.64rem;
-    font-weight: 600;
-    letter-spacing: 0.35rem;
-    color: #8d98a6;
-    line-height: 1;
-    top: 40px;
-    position: relative;
-  }
-
   /* card body */
   &__body {
     flex: 1 1 auto;
@@ -241,15 +200,12 @@ $bp: (
     justify-content: center;
     padding: 1rem 1.25rem; /* compact on mobile */
     background: #fff; /* ensure contrast */
-    height: 155px;
+    // height: 155px;
   }
 
   &__subtitle {
     margin: 0 0 0.35rem 0;
-    text-transform: uppercase;
     letter-spacing: 0.25rem;
-    font-size: 0.42rem;
-    font-weight: 600;
     color: #6b7380; /* muted text */
   }
 
@@ -259,6 +215,20 @@ $bp: (
     font-size: 1rem !important; /* ~16px mobile */
     line-height: 1.25;
     color: #0f1222; /* near-black */
+  }
+}
+
+.btn-light {
+  background-color: $thirdColor;
+  border: 0;
+  transition: 0.5s ease, left 0.3s ease;
+  &:hover {
+    border: 0;
+    background-color: $secondColor;
+    .card-work__subtitle {
+      color: $white;
+      transition: 0.5s ease, left 0.3s ease;
+    }
   }
 }
 

@@ -1,4 +1,4 @@
-@import "./../../../variables.scss";
+@import "src/variables.scss";
 
 .article1 {
   // color: white;
@@ -22,19 +22,19 @@
   &__headline {
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-size: 0.75rem;
-    color: $headLine;
+    font-size: $headlineSizeText;
+    color: $headLineColor;
     margin-bottom: 0.5rem;
   }
 
   &__arrow {
-    color: #b3ff27;
+    color: $secondColor;
     font-size: 1rem;
   }
 
   &__title {
-    font-size: 1.4rem;
-    color: $title;
+    font-size: $subtileSize1;
+    color: $titleColor;
     font-weight: 600;
     margin-bottom: 1rem;
   }

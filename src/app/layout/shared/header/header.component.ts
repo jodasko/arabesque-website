@@ -34,7 +34,9 @@ export class HeaderComponent implements OnInit {
 
   get sectionIds(): string[] {
     // derive dynamically from navLinks (first 3 only if you want)
-    return this.navLinks.slice(0, this.navLinks.length).map((link) => link.id);
+    return this.navLinks
+      .slice(0, this.navLinks.length)
+      .map((link) => link.id.toLowerCase().replace(/\s+/g, ''));
   }
 
   private slugify(value: string): string {

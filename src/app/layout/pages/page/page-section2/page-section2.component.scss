@@ -1,4 +1,4 @@
-@import "../../../../../variables.scss";
+@import "src/variables.scss";
 
 .page-section2 {
   color: white;
@@ -42,7 +42,7 @@
         font-size: 13px;
         font-weight: normal;
         color: #fff;
-        font-family: $CodeFont;
+        font-family: $mainFont;
         margin-top: 10px;
         padding-top: 0;
       }
@@ -58,8 +58,8 @@
         position: relative;
         z-index: 2;
         padding: 25px;
-        background-color: $LightNavy;
-        color: $LightSlate;
+        background-color: red;
+        color: orchid;
         font-size: 18px;
         border-radius: 3px;
         text-align: justify;
@@ -79,9 +79,9 @@
         list-style: none;
         li {
           margin-right: 0;
-          font-family: $CodeFont;
+          font-family: $mainFont;
           font-size: 13px;
-          color: $Slate;
+          color: greenyellow;
           margin-bottom: 7px;
           white-space: nowrap;
           .technology {
@@ -156,7 +156,7 @@
         z-index: 2;
         padding: 25px;
         background-color: transparent !important;
-        color: $LightSlate;
+        color: orchid;
         font-size: 18px;
         border-radius: 3px;
         text-align: justify;
@@ -232,12 +232,12 @@
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: $Green;
+  background: aquamarine;
   border-radius: 3px;
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $Green;
+  background: aquamarine;
 }

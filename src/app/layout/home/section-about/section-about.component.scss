@@ -1,0 +1,243 @@
+@import "src/variables.scss";
+
+/* Breakpoints map */
+$bp: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+);
+
+/* Mixin for media queries */
+@mixin mq($key) {
+  @media (min-width: map-get($bp, $key)) {
+    @content;
+  }
+}
+
+/* Host */
+:host {
+  display: block;
+}
+
+/* ─────────────────────────────  BANNER ─────────────────────────────────────────────── */
+.banner-aboutus {
+  position: absolute;
+  font-family: $mainFont;
+  min-height: 60vh;
+  position: relative;
+  isolation: auto; // ensures overlay doesn’t leak out
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  /* Dark overlay for readability */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+  }
+
+  /* Show menu when host gets .show-menu (see TS) */
+  :host.show-menu &__links {
+    display: flex;
+  }
+
+  /* CONTENT */
+  &__content {
+    flex: 1 1 auto;
+    padding-left: 110px;
+  }
+
+  &__title {
+    font-size: $titleSizeH1;
+    font-weight: 700;
+    line-height: 1.05;
+    font-weight: 300;
+    // margin: 0;
+    // text-align: center;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: clamp(1.125rem, 2vw + 0.5rem, 1.75rem);
+    margin: 0;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  &__rectangle {
+    position: relative;
+    width: 44%;
+    height: 60%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    background-color: $greyLight;
+    opacity: 0.6;
+  }
+
+  &__button {
+    margin-top: 2rem;
+  }
+
+  @include mq(sm) {
+    &__title {
+      font-size: $titleSizeH1;
+      text-align: left;
+    }
+    &__subtitle {
+      text-align: left;
+      font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+    }
+    &__button {
+      margin-top: 3rem;
+    }
+  }
+}
+
+// ─────────────────────────────  ABOUT US ARTICLE  ─────────────────────────────────────────────── */
+
+.article-aboutus {
+  &__container {
+    width: 570px !important;
+    height: 160px;
+    position: absolute;
+    top: 170px;
+    left: 150px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__heading {
+    flex: 1;
+  }
+
+  &__headline {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: $headlineSizeText;
+    color: $headLineColor;
+    margin-bottom: 0.5rem;
+  }
+
+  &__arrow {
+    color: $secondColor;
+    font-size: 1rem;
+  }
+
+  &__title {
+    font-size: $subtileSize1;
+    color: $titleColor;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    border-left: 0.255rem solid $black;
+    color: $titleColor;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.2em;
+  }
+
+  &__steps {
+    flex: 1;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.2;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__step-title {
+    font-size: 1.2rem;
+    color: #00b5e2;
+    margin-bottom: 0.3rem;
+  }
+
+  &__step-desc {
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+}
+
+// ─────────────────────────────  ABOUT US CARD  ─────────────────────────────────────────────── */
+
+.section-aboutus {
+  &__card {
+    background-color: $secondColor;
+    .card {
+      width: 80%;
+
+      &-title {
+        font-size: $titleSiweh2;
+      }
+
+      &-text {
+        small {
+          bottom: 20px;
+          font-size: $ctaSizeText;
+          letter-spacing: 0.255rem;
+        }
+        p {
+          font-size: $contentSizeText;
+        }
+      }
+    }
+  }
+
+  &__card-image {
+    width: 300px;
+  }
+
+  &__card-bar {
+    width: 6%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    background-color: #090b19;
+    opacity: 0.6;
+    position: absolute;
+  }
+}

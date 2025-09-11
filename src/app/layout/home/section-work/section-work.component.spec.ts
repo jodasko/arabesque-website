@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { Section2Component } from './section2.component';
+import { Section3Component } from './section-work.component';
 
-describe('BannerComponent', () => {
-  let component: Section2Component;
-  let fixture: ComponentFixture<Section2Component>;
+describe('JobsComponent', () => {
+  let component: Section3Component;
+  let fixture: ComponentFixture<Section3Component>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [Section2Component],
+      declarations: [Section3Component],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Section2Component);
+    fixture = TestBed.createComponent(Section3Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

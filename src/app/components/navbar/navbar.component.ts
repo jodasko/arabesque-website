@@ -62,7 +62,11 @@ export class NavbarComponent implements OnInit {
   }
 
   onScrollTo(el: string): void {
-    this.scrollService.scrollTo(el);
+    this.scrollService.scrollTo(this.setIdFormat(el));
+  }
+
+  setIdFormat(value: string): string {
+    return value.toLocaleLowerCase();
   }
 
   scrollToTop(): void {

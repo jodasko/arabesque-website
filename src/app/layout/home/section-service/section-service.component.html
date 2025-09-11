@@ -1,5 +1,5 @@
-<div class="container mt-5 pt-5">
-  <div class="row">
+<div class="container my-5 py-5">
+  <div class="row row my-5 border-bottom">
     <div class="col-6">
       <article-component
         class="d-flex mt-4 mt-5"
@@ -17,16 +17,21 @@
   </div>
 
   <div class="row">
-    <div class="col-4" *ngFor="let card of cardData">
-      <div class="card" style="width: 18rem">
-        <img [src]="card.imgSrc" class="card-img-top" alt="..." />
+    <div class="card-group">
+      <div class="card border-0" *ngFor="let card of cardData | translate">
+        <img
+          [src]="'assets/images/services/' + card.img"
+          class="card-img-top"
+          alt="..."
+        />
         <div class="card-body">
           <h5 class="card-title">{{ card.title }}</h5>
           <p class="card-text">
-            {{ card.description }}
+            {{ card.description | translate }}
           </p>
         </div>
       </div>
+      <!-- <div class="col-3"></div> -->
     </div>
   </div>
 </div>
