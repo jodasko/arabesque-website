@@ -20,7 +20,7 @@ import { HeroComponent } from './hero/hero.component';
 import { SectionServiceComponent } from './section-service/section-service.component';
 import { SectionAboutComponent } from './section-about/section-about.component';
 import { SectionWorkComponent } from './section-work/section-work.component';
-import { Section4Component } from './section4/section4.component';
+import { SectionGalleryComponent } from './section-gallery/section-gallery.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { Section4Component } from './section4/section4.component';
     SectionServiceComponent,
     SectionAboutComponent,
     SectionWorkComponent,
-    Section4Component,
+    SectionGalleryComponent,
   ],
   imports: [
     CommonModule,

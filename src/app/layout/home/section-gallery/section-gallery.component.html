@@ -1,0 +1,29 @@
+<section class="section-gallery container">
+  <div class="col-12 col-lg-2 text-lg-start text-center mb-4 mb-lg-0">
+    <h2 class="title display-4 fw-light lh-sm d-none d-lg-block">
+      {{ title | translate }}<br />
+    </h2>
+
+    <h2 class="title display-4 fw-light lh-sm d-block d-lg-none">Who We Are</h2>
+  </div>
+
+  <div class="gallery-wrapper">
+    <!-- <div class="team-description" [class.visible]="hoveredMember">
+      <h5 *ngIf="hoveredMember">{{ hoveredMember.name }}</h5>
+      <p class="role" *ngIf="hoveredMember">{{ hoveredMember.role }}</p>
+      <p class="bio" *ngIf="hoveredMember">{{ hoveredMember.description }}</p>
+    </div> -->
+
+    <div class="gallery">
+      <div
+        class="gallery-image"
+        *ngFor="let image of galleryData | translate; let i = index"
+        [class.middle-img]="i % 3 === 1"
+        [class.selected]="hoveredMember === image"
+        (mouseenter)="hoveredMember = image"
+      >
+        <img [src]="resolveImage(image.image)" [alt]="image.title" />
+      </div>
+    </div>
+  </div>
+</section>

@@ -13,17 +13,15 @@ interface item {
 export class SectionAboutComponent {
   bgImage = 'about/bg-image.png';
   bgColor: string | null = null;
-  headline: string = 'SECTION_ABOUT_HEADLINE';
-  title: string = 'SECTION_ABOUT_HEADLINE';
-  text: string = 'SECTION_ABOUT_CONTENT';
-  subTitle: string[] = [
-    'SECTION_ABOUT_CARD_TITLE_1',
-    'SECTION_ABOUT_CARD_TITLE_2',
-  ];
-  titleCard: string = 'SECTION_ABOUT_CARD_TITLE';
-  textCard2: string = 'SECTION_ABOUT_CARD_CONTENT_1';
-  textCard1: string = 'SECTION_ABOUT_CARD_CONTENT_1';
-  subTitleCard: string = 'SECTION_ABOUT_CARD_FOOT';
+  headline: string = 'ABOUT_HEADLINE';
+  title: string = 'ABOUT_HEADLINE';
+  titles: string[] = ['ABOUT_CARD_TITLE_1', 'ABOUT_CARD_TITLE_2'];
+  text: string = 'ABOUT_CONTENT';
+  subTitle: string = 'ABOUT_SUBTITLE';
+  titleCard: string = 'ABOUT_CARD_TITLE';
+  textCard2: string = 'ABOUT_CARD_CONTENT_1';
+  textCard1: string = 'ABOUT_CARD_CONTENT_1';
+  subTitleCard: string = 'ABOUT_CARD_FOOT';
   bgImageCard = '/assets/images/about/owner.png';
 
   constructor() {}

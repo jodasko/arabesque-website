@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { Section4Component } from './section4.component';
+import { SectionGalleryComponent } from './section-gallery.component';
 
 describe('BannerComponent', () => {
-  let component: Section4Component;
-  let fixture: ComponentFixture<Section4Component>;
+  let component: SectionGalleryComponent;
+  let fixture: ComponentFixture<SectionGalleryComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [Section4Component],
+      declarations: [SectionGalleryComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Section4Component);
+    fixture = TestBed.createComponent(SectionGalleryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

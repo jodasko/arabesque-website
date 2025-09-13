@@ -22,10 +22,10 @@
   "HERO_TITLE_2": "your home",
   "HERO_CTA": "schedule a call",
 
-  "SERVICE_SECTION_HEADLINE": "service",
-  "SERVICE_SECTION_TITLE": "we do it best.",
-  "SERVICE_SECTION_CTA": "view all services",
-  "SERVICE_SECTION_DETAILS": [
+  "SERVICE_HEADLINE": "service",
+  "SERVICE_TITLE": "we do it best.",
+  "SERVICE_CTA": "view all services",
+  "SERVICE_DETAILS": [
     {
       "img": "demo-service.png",
       "title": "Pose de cuisine",
@@ -53,53 +53,77 @@
     }
   ],
 
-  "SECTION_ABOUT_HEADLINE": "About arabesque",
-  "SECTION_ABOUT_SUBTITLE": "sayed hassan, menuisier",
-  "SECTION_ABOUT_CONTENT": "We're innovating the way companies reinvent their office spaces for the remote workforce.",
-  "SECTION_ABOUT_CARD_TITLE": "sayed hassan",
-  "SECTION_ABOUT_CARD_TITLE_1": "sayed",
-  "SECTION_ABOUT_CARD_TITLE_2": "hassan",
-  "SECTION_ABOUT_CARD_CONTENT_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum. Suspendisse potenti.",
-  "SECTION_ABOUT_CARD_CONTENT_2": "Vestibulum ut quam luctus, pharetra dui sed, rutrum felis. Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.",
-  "SECTION_ABOUT_CARD_FOOT": "antibes - alpes maritimes",
+  "ABOUT_HEADLINE": "About arabesque",
+  "ABOUT_SUBTITLE": "sayed hassan, menuisier",
+  "ABOUT_CONTENT": "We're innovating the way companies reinvent their office spaces for the remote workforce.",
+  "ABOUT_CARD_TITLE": "sayed hassan",
+  "ABOUT_CARD_TITLE_1": "sayed",
+  "ABOUT_CARD_TITLE_2": "hassan",
+  "ABOUT_CARD_CONTENT_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum. Suspendisse potenti.",
+  "ABOUT_CARD_CONTENT_2": "Vestibulum ut quam luctus, pharetra dui sed, rutrum felis. Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.",
+  "ABOUT_CARD_FOOT": "antibes - alpes maritimes",
 
-  "SECTION_WORK_HEADLINE": "Explore our work",
-  "SECTION_WORK_TITLE": "See what we can do together.",
-  "SECTION_WORK_CTA": "View All Projects",
+  "WORK_HEADLINE": "Explore our work",
+  "WORK_TITLE": "See what we can do together.",
+  "WORK_CTA": "View All Projects",
 
-  "SECTION_3_TITLE": "SECTION_3 TITLE",
-  "SECTION_3_DETAILS": [
+  "GALLERY_TITLE": "Gallery",
+  "GALLERY_IMAGES_DETAILS": [
     {
-      "tab": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": "From €000 - 5-day delivery available",
-      "description": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus."
-      ]
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "1.png"
     },
     {
-      "tab": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": "From €000 - 5-day delivery available",
-      "description": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus."
-      ]
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "2.png"
     },
     {
-      "tab": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": "From €000 - 5-day delivery available",
-      "description": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus."
-      ]
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "3.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "4.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "5.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "6.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "1.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "2.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "3.png"
     }
   ],
-
-  "SECTION_4_TITLE": "SECTION_4 TITLE",
-  "SECTION_4_SUBTITLE": "Lorem ipsum dolor sit amet",
-  "SECTION_4_SUBTITLE_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "SECTION_4_BODY": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
-  "SECTION_4_BODY_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
 
   "PAGE_HERO_TITLE_1": "PAGE HERO TITLE",
   "PAGE_HERO_TITLE_2": "PAGE HERO TITLE 2",

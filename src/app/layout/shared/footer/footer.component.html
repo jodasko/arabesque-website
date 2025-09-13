@@ -1,73 +1,93 @@
-<footer class="footer">
-  <div class="d-none">
-    <ul class="footer-left-bar d-none d-md-block">
-      <!-- TODO: CHECK OUT GITHUB PUBLIC CODE -->
-      <li>
-        <a
-          (click)="
-            analyticsService.sendAnalyticEvent(
-              'click_github',
-              'footer',
-              'github'
-            )
-          "
-          href="#"
-          target="_blank"
-        >
-          <i class="fab fa-github me-3"></i>
-        </a>
-      </li>
-      <li>
-        <a
-          (click)="
-            analyticsService.sendAnalyticEvent(
-              'click_linkedin',
-              'footer',
-              'github'
-            )
-          "
-          href="#"
-          target="_blank"
-        >
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+<footer class="footer footer__aboutus p-5">
+  <div class="card border-0 bg-transparent m-auto">
+    <div class="row">
+      <div class="col-4 border-start">
+        <img
+          class="footer__aboutus-logo w-50 mb-5"
+          [src]="'/assets/images/logo.png'"
+        />
+        <h3 class="text-white fs-3 mb-4 fw-light">About us</h3>
+        <p class="fs-6 text-white fw-light">
+          Mauris accumsan urna eu pharetra elementum. Suspendisse
+          potenti.Vestibulum ut quam luctus, pharetra dui sed, rutrum felis.
+          Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.
+          Vestibulum ut quam luctus, pharetra dui sed, rutrum felis.
+        </p>
+      </div>
+      <div class="col-4 border-start">
+        <nav class="navbar navbar-expand-lg footer__navigation">
+          <div class="container-fluid">
+            <div
+              class="collapse navbar-collapse flex-column align-items-start"
+              id="navbarSupportedContent"
+            >
+              <h6
+                class="ps-2 ls-6 text-white fw-light footer__navigation-title"
+              >
+                {{ "Navigation" | uppercase }}
+              </h6>
+              <ul
+                class="navbar-nav me-auto mb-2 mb-lg-0 flex-column text-white"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white fw-light"
+                    aria-current="page"
+                    href="#"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white fw-light" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white fw-light" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white fw-light" href="#">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-4 border-start">
+        <nav class="navbar navbar-expand-lg footer__socialNetwork">
+          <div class="container-fluid">
+            <div
+              class="collapse navbar-collapse flex-column align-items-start"
+              id="navbarSupportedContent"
+            >
+              <h6
+                class="ps-2 ls-6 text-white fw-light footer__navigation-title"
+              >
+                {{ "follow us" | uppercase }}
+              </h6>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><i class="fa-brands fa-facebook text-white"></i
+                    ><span class="ms-2 text-white">&#64;Arabesque</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><i class="fa-brands fa-instagram text-white"></i
+                    ><span class="ms-2 text-white">&#64;Arabesque</span></a
+                  >
+                </li>
 
-  <!-- Tagline + CTA -->
-  <div class="footer__contact">
-    <p class="footer__tagline">{{ "FOOTER_TAGLINE" | translate }}</p>
-    <a [routerLink]="['/contact']" class="footer__cta" aria-label="Contact us">
-      {{ "FOOTER_CTA" | translate }}
-    </a>
-  </div>
-
-  <!-- Divider -->
-  <hr class="footer__divider" />
-
-  <!-- Brand + Nav -->
-  <div class="footer__bottom">
-    <div class="footer__brand">
-      <img src="/assets/images/logo.png" alt="CS Studio" height="36" />
-      <span class="footer__brand-text">{{ "FOOTER_LOGO" | translate }}</span>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><i class="fa-brands fa-tiktok text-white"></i
+                    ><span class="ms-2 text-white">&#64;Arabesque</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
-
-    <nav class="footer__nav" aria-label="Footer navigation">
-      <ul role="list">
-        <li class="nav-item" *ngFor="let link of navLinks">
-          <a
-            class="nav-link"
-            [ngClass]="{ active: activeSection === link.id }"
-            (click)="onScrollTo(link.id)"
-          >
-            {{ link.label | translate }}
-          </a>
-        </li>
-      </ul>
-    </nav>
   </div>
-
-  <!-- Copyright -->
-  <p class="footer__copy">{{ "FOOTER_ALLRIGHTS" | translate }} | {{ year }}</p>
 </footer>

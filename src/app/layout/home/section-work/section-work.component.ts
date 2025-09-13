@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SectionWorkComponent implements OnInit {
   bgImage = 'bg-work.png';
   bgColor: string | null = null;
-  title: string = 'SECTION_WORK_TITLE';
+  title: string = 'WORK_TITLE';
   titleLines = [];
-  headline: string = 'SECTION_WORK_HEADLINE';
+  headline: string = 'WORK_HEADLINE';
   subTitle: string = '';
-  ctaButtonText = 'SECTION_WORK_CTA';
+  ctaButtonText = 'WORK_CTA';
 
   constructor() {}
 

@@ -16,7 +16,7 @@
             <h2 *ngIf="title" class="article-aboutus__title">
               {{ text | translate }}
             </h2>
-            <p *ngIf="text" class="article-aboutus__text mt-5 ps-2">
+            <p *ngIf="subTitle" class="article-aboutus__text mt-5 ps-2">
               {{ subTitle | translate | uppercase }}
             </p>
           </div>
@@ -42,10 +42,10 @@
           <div class="row">
             <div class="col-6 pt-4">
               <h5 class="card-title text-white lh-1 my-0">
-                {{ subTitle[0] | translate | uppercase }}
+                {{ titles[0] | translate | uppercase }}
               </h5>
               <h5 class="card-title text-white lh-1">
-                {{ subTitle[1] | translate | titlecase }}
+                {{ titles[1] | translate | titlecase }}
               </h5>
               <p class="card-text">
                 <small class="position-absolute text-white">

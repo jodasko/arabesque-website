@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './section-service.component.scss',
 })
 export class SectionServiceComponent {
-  headLine = 'SERVICE_SECTION_HEADLINE';
-  title = 'SERVICE_SECTION_TITLE';
-  ctaButtonText = 'SERVICE_SECTION_CTA';
-  cardData = 'SERVICE_SECTION_DETAILS';
+  headLine = 'SERVICE_HEADLINE';
+  title = 'SERVICE_TITLE';
+  ctaButtonText = 'SERVICE_CTA';
+  cardData = 'SERVICE_DETAILS';
 }
