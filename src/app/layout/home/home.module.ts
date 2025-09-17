@@ -10,7 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 
 /*Components */
 // import { BannerComponent } from '../../components/banner/banner.component';
-import { Banner2Component } from '../../components/banner2/banner2.component';
+// import { Banner2Component } from '../../components/banner2/banner2.component';
 import { ArticleComponent } from '../../components/article/article.component';
 import { CtaButtonComponent } from '../../components/cta-button/cta-button.component';
 import { HomeComponent } from './home.component';
@@ -38,7 +38,6 @@ import { SectionGalleryComponent } from './section-gallery/section-gallery.compo
     CarouselModule,
     TranslateModule,
     SharedModule,
-    Banner2Component,
     ArticleComponent,
     CtaButtonComponent,
   ],

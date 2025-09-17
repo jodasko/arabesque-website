@@ -30,6 +30,29 @@ nav.navbar {
       background: $white !important;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
+      .nav-link {
+        transition: 0.3s ease, left 0.3s ease;
+        color: $mainColor;
+        font-weight: lighter;
+
+        &.active {
+          transition: 0.1s ease, left 0.3s ease;
+          color: $forthColor;
+          &::after {
+            background: $forthColor;
+            bottom: 2px;
+            content: "";
+            display: block;
+            height: 1px;
+            left: 50%;
+            position: absolute;
+            transition: width 0.3s ease, left 0.3s ease;
+            width: 100%;
+            left: 0;
+          }
+        }
+      }
+
       .nav-text {
         color: $mainColor !important; /* inverted link color */
       }

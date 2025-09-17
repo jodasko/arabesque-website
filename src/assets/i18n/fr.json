@@ -1,11 +1,13 @@
 {
-  "STAY_TUNED": "We're almost live. A new kind of devTech partner is coming — flexible, sharp, and ready to launch.🚀",
+  "STAY_TUNED": "Nous faisons le nettoyage ici, afin de préparer le terrain pour vous très bientôt...",
+  "STAY_TUNED_2": "Le site sera disponible prochainement !",
   "COMPANY_NAME": "Arabesque",
 
   "NAV_MENU_1": "services",
-  "NAV_MENU_2": "gallery",
-  "NAV_MENU_3": "about us",
-  "NAV_MENU_4": "contact",
+  "NAV_MENU_2": "about us",
+  "NAV_MENU_3": "work",
+  "NAV_MENU_4": "gallery",
+  "NAV_MENU_5": "contact",
   "NAV_TAGLINE": "menuiserie",
 
   "FOOTER_NAV_MENU_1": "menu 1",
@@ -16,56 +18,113 @@
   "FOOTER_ALLRIGHTS": "© all rights reserved",
   "FOOTER_CTA": "ACTION CTA",
 
-  "HERO_TITLE": "Quality joinery for",
+  "HERO_TITLE": "Quality joinery for your home",
+  "HERO_TITLE_1": "Quality joinery for",
   "HERO_TITLE_2": "your home",
   "HERO_CTA": "schedule a call",
 
   "SERVICE_HEADLINE": "service",
   "SERVICE_TITLE": "we do it best.",
   "SERVICE_CTA": "view all services",
-
-  "SECTION_1_TITLE": "SECTION_1 TITLE",
-  "SECTION_1_SUBTITLE": "SECTION_1 SUBTITLE",
-  "SECTION_1_BODY": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
-  "SECTION_1_CTA": "CTA BUTTON",
-
-  "SECTION_2_TITLE": "SECTION_2 TITLE",
-  "SECTION_2_BODY": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
-  "SECTION_2_CTA": "CTA BUTTON",
-
-  "SECTION_3_TITLE": "SECTION_3 TITLE",
-  "SECTION_3_DETAILS": [
+  "SERVICE_DETAILS": [
     {
-      "tab": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": "From €000 - 5-day delivery available",
-      "description": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus."
-      ]
+      "img": "01.jpg",
+      "title": "Pose de cuisine",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     },
     {
-      "tab": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": "From €000 - 5-day delivery available",
-      "description": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus."
-      ]
+      "img": "02.jpg",
+      "title": "Pose de fenêtre alu et PVC",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     },
     {
-      "tab": "Lorem ipsum",
-      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "price": "From €000 - 5-day delivery available",
-      "description": [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus."
-      ]
+      "img": "03.jpg",
+      "title": "Pose de parquet intérieur",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+    },
+    {
+      "img": "04.jpg",
+      "title": "Pose de terrasse bois",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+    },
+    {
+      "img": "05.jpg",
+      "title": "Pose de placo-plâtre",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     }
   ],
 
-  "SECTION_4_TITLE": "SECTION_4 TITLE",
-  "SECTION_4_SUBTITLE": "Lorem ipsum dolor sit amet",
-  "SECTION_4_SUBTITLE_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "SECTION_4_BODY": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
-  "SECTION_4_BODY_2": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et justo sed metus laoreet porttitor. Pellentesque nulla est, condimentum vel interdum sit amet, cursus vel lacus.",
+  "ABOUT_HEADLINE": "About arabesque",
+  "ABOUT_SUBTITLE": "sayed hassan, menuisier",
+  "ABOUT_CONTENT": "We're innovating the way companies reinvent their office spaces for the remote workforce.",
+  "ABOUT_CARD_TITLE": "sayed hassan",
+  "ABOUT_CARD_TITLE_1": "sayed",
+  "ABOUT_CARD_TITLE_2": "hassan",
+  "ABOUT_CARD_CONTENT_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum. Suspendisse potenti.",
+  "ABOUT_CARD_CONTENT_2": "Vestibulum ut quam luctus, pharetra dui sed, rutrum felis. Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.",
+  "ABOUT_CARD_FOOT": "antibes - alpes maritimes",
+
+  "WORK_HEADLINE": "Explore our work",
+  "WORK_TITLE": "See what we can do together.",
+  "WORK_CTA": "View All Projects",
+
+  "GALLERY_TITLE": "Gallery",
+  "GALLERY_IMAGES_DETAILS": [
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "1.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "2.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "3.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "4.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "5.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "6.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "1.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "2.png"
+    },
+    {
+      "location": "Miami, Florida",
+      "title": "Allstate Employee Lounge",
+      "date": "1.22.22",
+      "image": "3.png"
+    }
+  ],
 
   "PAGE_HERO_TITLE_1": "PAGE HERO TITLE",
   "PAGE_HERO_TITLE_2": "PAGE HERO TITLE 2",

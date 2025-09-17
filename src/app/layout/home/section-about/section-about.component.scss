@@ -99,6 +99,89 @@ $bp: (
   }
 }
 
+.about {
+  height: 450px;
+  position: relative;
+  display: grid;
+  min-height: clamp(
+    420px,
+    60vh,
+    680px
+  ); // responsive height without hard-coding
+  overflow: hidden;
+  color: #fff;
+  font-family: $mainFont;
+
+  /* Background image */
+  &__media {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  /* Darken image for readability (independent from text) */
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+  }
+
+  /* The “rectangle” behind the text.
+     IMPORTANT: use an alpha background, NOT opacity. */
+  &__panel {
+    position: relative;
+    z-index: 2; // above overlay
+    width: min(44%, 780px); // match your 44% rectangle at large screens
+    margin-left: clamp(16px, 7vw, 110px);
+    padding: clamp(16px, 2.5vw, 28px);
+    background: rgb(235 239 245 / 60%); // light grey @ 60% alpha
+    backdrop-filter: saturate(120%) blur(0.5px); // optional subtle polish
+    display: grid;
+    row-gap: clamp(8px, 1.8vw, 22px);
+    align-content: center;
+  }
+
+  &__eyebrow {
+    font-size: $eyebrow;
+    letter-spacing: 0.2em;
+    color: $black;
+  }
+
+  &__arrow {
+    font-size: 1rem;
+    color: $secondColor;
+  }
+
+  &__title {
+    line-height: 1.05;
+    // font-size: clamp(1.6rem, 3.8vw, 3rem);
+    color: #0b0f1a; // dark ink over the light rectangle
+  }
+
+  &__quote {
+    // margin: 0;
+    // padding-left: 0.5rem;
+    border-left: 3px solid rgba(11, 15, 26, 0.6);
+    color: rgba(11, 15, 26, 0.8);
+    // font-size: clamp(0.9rem, 1.6vw, 1.125rem);
+    // font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+
+  /* Larger screens: widen the panel a bit */
+  @media (min-width: 1024px) {
+    &__panel {
+      width: 35%;
+      row-gap: 24px;
+      max-height: 360px;
+    }
+  }
+}
+
 // ─────────────────────────────  ABOUT US ARTICLE  ─────────────────────────────────────────────── */
 
 .article-aboutus {

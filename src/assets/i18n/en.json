@@ -1,5 +1,6 @@
 {
-  "STAY_TUNED": "We're almost live. A new kind of devTech partner is coming — flexible, sharp, and ready to launch.🚀",
+  "STAY_TUNED": "Cleaning up here, so we can build up for you soon...",
+  "STAY_TUNED_2": "website arriving shortly!",
   "COMPANY_NAME": "Arabesque",
 
   "NAV_MENU_1": "services",
@@ -27,27 +28,27 @@
   "SERVICE_CTA": "view all services",
   "SERVICE_DETAILS": [
     {
-      "img": "demo-service.png",
+      "img": "01.jpg",
       "title": "Pose de cuisine",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     },
     {
-      "img": "demo-service.png",
+      "img": "02.jpg",
       "title": "Pose de fenêtre alu et PVC",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     },
     {
-      "img": "demo-service.png",
+      "img": "03.jpg",
       "title": "Pose de parquet intérieur",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     },
     {
-      "img": "demo-service.png",
+      "img": "04.jpg",
       "title": "Pose de terrasse bois",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     },
     {
-      "img": "demo-service.png",
+      "img": "05.jpg",
       "title": "Pose de placo-plâtre",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
     }

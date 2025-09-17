@@ -27,4 +27,11 @@ export const layoutRoutes: Routes = [
         (m) => m.ContactPageModule
       ),
   },
+  {
+    path: 'underconstruction',
+    loadChildren: () =>
+      import('./pages/underconstruction-page/undersconstruction.module').then(
+        (m) => m.UnderconstructionModule
+      ),
+  },
 ];

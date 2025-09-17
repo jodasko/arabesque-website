@@ -1,28 +1,30 @@
-<section class="section-aboutus mt-5 pt-5">
-  <div class="banner-aboutus" [ngStyle]="backgroundStyle" style="height: 550px">
-    <div
-      class="banner-aboutus__content d-flex flex-column justify-content-center w-100"
+<section class="about mt-5 pt-5">
+  <!-- background image layer -->
+  <div class="about__media" [ngStyle]="backgroundStyle"></div>
+
+  <!-- soft dark overlay over the image, not the text -->
+  <!-- <div class="about__overlay" aria-hidden="true"></div> -->
+
+  <!-- the light rectangle; text sits ON TOP, not affected by opacity -->
+  <div class="about__panel rounded">
+    <p
+      *ngIf="headline"
+      class="about__eyebrow d-flex align-items-center gap-2 m-0 mb-4"
     >
-      <div class="banner-aboutus__rectangle"></div>
-      <section class="article-aboutus article-aboutus__container">
-        <div class="article-aboutus__content">
-          <div class="article-aboutus__heading">
-            <p *ngIf="headline" class="article-aboutus__headline mb-5 pb-2">
-              {{ headline | translate }}
-              <span class="article-aboutus__arrow"
-                ><i class="bi bi-arrow-down-right"></i
-              ></span>
-            </p>
-            <h2 *ngIf="title" class="article-aboutus__title">
-              {{ text | translate }}
-            </h2>
-            <p *ngIf="subTitle" class="article-aboutus__text mt-5 ps-2">
-              {{ subTitle | translate | uppercase }}
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
+      {{ headline | translate | uppercase }}
+      <span class="about__arrow"><i class="bi bi-arrow-down-right"></i></span>
+    </p>
+
+    <h2 *ngIf="title" class="about__title fs-3 fw-semibold">
+      {{ text | translate }}
+    </h2>
+
+    <p
+      *ngIf="subTitle"
+      class="about__quote fw-normal m-0 ps-2 fs-6 mt-2 border-start border-3 border-dark border-opacity-75"
+    >
+      {{ subTitle | translate | uppercase }}
+    </p>
   </div>
 </section>
 

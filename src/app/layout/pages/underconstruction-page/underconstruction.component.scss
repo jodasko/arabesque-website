@@ -1,0 +1,60 @@
+@import "src/variables.scss";
+
+.underconstruction {
+  text-align: center;
+  padding: 1rem;
+  background-color: $forthColor;
+  height: 100vh;
+  color: $mainColor;
+
+  img {
+    max-width: 300px; // Default width for the logo
+    height: auto;
+  }
+
+  .message em {
+    font-style: italic;
+    color: $mainColor;
+  }
+}
+
+/* --- RESPONSIVENESS --- */
+
+/* Small devices (e.g., phones) */
+@media (max-width: 480px) {
+  .underconstruction {
+    img {
+      max-width: 200px; // Smaller logo for phones
+    }
+
+    .message {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Medium devices (e.g., tablets) */
+@media (max-width: 768px) {
+  .underconstruction {
+    img {
+      max-width: 250px; // Adjusted logo size for tablets
+    }
+
+    .message {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+/* Large devices (e.g., desktops) */
+@media (min-width: 769px) {
+  .munderconstruction {
+    img {
+      max-width: 400px; // Larger logo for desktops
+    }
+
+    .message {
+      font-size: 1rem;
+    }
+  }
+}

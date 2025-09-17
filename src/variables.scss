@@ -21,12 +21,16 @@ html {
 // $GreenOpacity: rgba(100, 255, 218, 0.07);
 // TODO
 
+$fs-14: 14px;
+$fs-28: 28px;
+
 // FONTS
 // $mainFont: Roboto, SF Mono, Fira Code, Fira Mono, Mono, Lucida Console, Monaco, Monospace;
 $mainFont: "Inter", sans-serif;
 $titleSizeH1: clamp(72px, -1.875rem + 7.083333333333333vw, 106px);
 $titleSiweh2: 52px;
 $ctaSizeText: 14px;
+$eyebrow: $fs-14;
 $headlineSizeText: 14px;
 $subtileSize1: 28px;
 $subtileSizeText2: 18px;
@@ -41,6 +45,7 @@ $creameWhite: #fffef6;
 $mainColor: #5a4947;
 $secondColor: #81795a;
 $thirdColor: #f3f6fc;
+$forthColor: #d2bf74;
 
 // ELEMENTS
 $headLineColor: $black;
