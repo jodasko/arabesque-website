@@ -1,0 +1,178 @@
+/* ===== Breakpoints map (Bootstrap 5.x aligned) ===== */
+$bps: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+/* ---- Internal helpers ---- */
+@function bp-val($bp) {
+  @if map-has-key($bps, $bp) {
+    @return map-get($bps, $bp);
+  }
+  @error "Unknown breakpoint `#{$bp}`. Valid: #{map-keys($bps)}";
+}
+@function bp-next($bp) {
+  $keys: map-keys($bps);
+  $idx: index($keys, $bp);
+  @if $idx == null {
+    @return null;
+  }
+  @if $idx == length($keys) {
+    @return null;
+  } /* last has no next */
+  @return nth($keys, $idx + 1);
+}
+
+/* ---- Viewport media mixins (mobile-first) ---- */
+@mixin up($bp) {
+  /* >= bp */
+  @media (min-width: bp-val($bp)) {
+    @content;
+  }
+}
+@mixin down($bp) {
+  /* < bp (exclusive) */
+  @media (max-width: calc(bp-val($bp) - 0.02px)) {
+    @content;
+  }
+}
+@mixin between($from, $to) {
+  /* >= from AND < to */
+  @media (min-width: bp-val($from)) and (max-width: calc(bp-val($to) - 0.02px)) {
+    @content;
+  }
+}
+@mixin only($bp) {
+  /* from bp to just before next bp */
+  $nxt: bp-next($bp);
+  @if $nxt == null {
+    @include up($bp) {
+      @content;
+    }
+  } @else {
+    @include between($bp, $nxt) {
+      @content;
+    }
+  }
+}
+
+/* ---- Raw pixel helpers (for ad-hoc queries; prefer tokenized above) ---- */
+@mixin minw($px) {
+  @media (min-width: #{$px}) {
+    @content;
+  }
+}
+@mixin maxw($px) {
+  @media (max-width: #{$px}) {
+    @content;
+  }
+}
+@mixin minmaxw($min, $max) {
+  @media (min-width: #{$min}) and (max-width: #{$max}) {
+    @content;
+  }
+}
+
+/* ---- Orientation ---- */
+@mixin landscape {
+  @media (orientation: landscape) {
+    @content;
+  }
+}
+@mixin portrait {
+  @media (orientation: portrait) {
+    @content;
+  }
+}
+
+/* ---- Input/hover capability ---- */
+@mixin hoverable {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+/* ---- Accessibility/user prefs ---- */
+@mixin reduce-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+@mixin light {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
+
+/* ---- High DPI / Retina ---- */
+@mixin retina {
+  /* ~2x and up */
+  @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+/* ---- Print ---- */
+@mixin print {
+  @media print {
+    @content;
+  }
+}
+
+/* ===========================================================
+   OPTIONAL: Container Queries (requires container setup)
+   -----------------------------------------------------------
+   1) On a wrapper: `container-type: inline-size;` (or `size`)
+   2) Optionally name it: `container-name: hero;`
+   Then use these mixins to respond to the container, not viewport.
+   =========================================================== */
+$containers: (
+  hero: 0,
+  /* you can define named containers if you want to restrict queries */ card: 0,
+  any: 0,
+) !default;
+
+@mixin cq-up($width, $name: any) {
+  @container #{if($name == any, '', $name)} (min-width: #{$width}) {
+    @content;
+  }
+}
+@mixin cq-between($from, $to, $name: any) {
+  @container #{if($name == any, '', $name)} (min-width: #{$from}) and (max-width: calc(#{$to} - 0.02px)) {
+    @content;
+  }
+}
+
+/* Utility: expose map keys for debugging */
+@mixin debug-bps {
+  /* stylelint-disable-next-line */
+  body::after {
+    content: "BPs: #{map-keys($bps)}";
+    position: fixed;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    font: 12px/1 monospace;
+    border-radius: 0.25rem;
+    z-index: 9999;
+    pointer-events: none;
+  }
+}

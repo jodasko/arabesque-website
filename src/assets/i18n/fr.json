@@ -1,12 +1,12 @@
 {
-  "STAY_TUNED": "Nous faisons le nettoyage ici, afin de préparer le terrain pour vous très bientôt...",
-  "STAY_TUNED_2": "Le site sera disponible prochainement !",
+  "STAY_TUNED": "Cleaning up here, so we can build up for you soon...",
+  "STAY_TUNED_2": "website arriving shortly!",
   "COMPANY_NAME": "Arabesque",
 
   "NAV_MENU_1": "services",
-  "NAV_MENU_2": "about us",
-  "NAV_MENU_3": "work",
-  "NAV_MENU_4": "gallery",
+  "NAV_MENU_2": "à propos",
+  "NAV_MENU_3": "réalisations",
+  "NAV_MENU_4": "galerie",
   "NAV_MENU_5": "contact",
   "NAV_TAGLINE": "menuiserie",
 
@@ -18,10 +18,13 @@
   "FOOTER_ALLRIGHTS": "© all rights reserved",
   "FOOTER_CTA": "ACTION CTA",
 
-  "HERO_TITLE": "Quality joinery for your home",
-  "HERO_TITLE_1": "Quality joinery for",
-  "HERO_TITLE_2": "your home",
-  "HERO_CTA": "schedule a call",
+  "HERO_TITLE": "Menuiserie de qualité pour votre maison",
+  "HERO_TITLE_1": "Menuiserie de qualité",
+  "HERO_TITLE_2": "pour votre maison",
+  "HERO_CTA": "Our services",
+  "HERO_LOCATION": "Situés dans",
+  "HERO_LOCATION_REGION": "les Alpes-Maritimes",
+  "HERO_LOCATION_TITLE": "Menuiserie sur mesure",
 
   "SERVICE_HEADLINE": "service",
   "SERVICE_TITLE": "we do it best.",

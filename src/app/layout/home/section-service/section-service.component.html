@@ -8,30 +8,37 @@
       ></article-component>
     </div>
     <div class="col-6">
-      <cta-button-component
+      <!-- <cta-button-component
         class="d-flex justify-content-end mb-3 mt-4 mt-5"
         [ctaButtonText]="ctaButtonText"
         [backgroundColorBtn]="'#81795a'"
-      ></cta-button-component>
+      ></cta-button-component> -->
+      <div class="d-flex justify-content-end mb-3 mt-4 mt-5">
+        <button type="button" class="btn btn-lg px-5 services__btn">
+          {{ ctaButtonText | translate | uppercase }}
+        </button>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="card-group">
-      <div class="card border-0 mx-2" *ngFor="let card of cardData | translate">
-        <img
-          [src]="'assets/images/services/' + card.img"
-          class="card-img-top rounded"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">{{ card.title }}</h5>
-          <p class="card-text">
-            {{ card.description | translate }}
-          </p>
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+      <div class="col" *ngFor="let card of cardData | translate">
+        <div class="card h-100 border-0">
+          <img
+            [src]="'assets/images/services/' + card.img"
+            class="card-img-top rounded"
+            style="aspect-ratio: 16/9; object-fit: cover"
+            [alt]="card.title"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ card.title }}</h5>
+            <p class="card-text">
+              {{ card.description | translate }}
+            </p>
+          </div>
         </div>
       </div>
-      <!-- <div class="col-3"></div> -->
     </div>
   </div>
 </div>

@@ -1,285 +1,187 @@
-@import "src/variables.scss";
+@use "styles/variables" as v;
+@use "styles/mixins" as mx;
+@use "styles/breakpoints" as bp;
 
-/* Breakpoints map */
-$bp: (
-  sm: 640px,
-  md: 768px,
-  lg: 1024px,
-);
-
-/* Mixin for media queries */
-@mixin mq($key) {
-  @media (min-width: map-get($bp, $key)) {
-    @content;
-  }
-}
-
-/* Host */
-:host {
-  display: block;
-}
-
-/* ───────────────────────────── HERO ─────────────────────────────────────────────── */
-.banner {
-  font-family: $mainFont;
-  min-height: 60vh;
+/* ─── HERO ─────────────────────────────────────────────────────────────── */
+.hero {
   position: relative;
-  isolation: isolate; // ensures overlay doesn’t leak out
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   color: #fff;
-  align-items: center;
-  /* Dark overlay for readability */
-  &::before {
-    content: "";
+  font-family: v.$fontInter;
+
+  /* background layer + overlay (text unaffected) */
+  &__bg {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: -1;
-  }
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
 
-  /* NAVBAR */
-  &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__brand {
-    line-height: 0;
-  }
-
-  /* Burger toggle */
-  &__toggle {
-    background: none;
-    border: 0;
-    padding: 0.25rem;
-    cursor: pointer;
-    line-height: 0;
-
-    @include mq(md) {
-      display: none;
-    }
-
-    span,
-    span::before,
-    span::after {
-      display: block;
-      width: 1.5rem;
-      height: 2px;
-      background: currentColor;
-      border-radius: 1px;
-      transition: transform 0.3s, opacity 0.3s;
-    }
-
-    span {
-      position: relative;
-    }
-
-    span::before,
-    span::after {
+    /* overlay */
+    &::before {
       content: "";
       position: absolute;
-      left: 0;
-    }
-
-    span::before {
-      top: -0.5rem;
-    }
-    span::after {
-      top: 0.5rem;
-    }
-
-    &.is-active span {
-      background: transparent;
-    }
-    &.is-active span::before {
-      transform: translateY(0.5rem) rotate(45deg);
-    }
-    &.is-active span::after {
-      transform: translateY(-0.5rem) rotate(-45deg);
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
     }
   }
 
-  /* Links */
-  &__links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: none; // hidden until toggled
-    flex-direction: column;
-    gap: 1.25rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-
-    a {
-      color: inherit;
-      text-decoration: none;
-      transition: opacity 0.2s;
-
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-
-    @include mq(md) {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-
-  /* Show menu when host gets .show-menu (see TS) */
-  :host.show-menu &__links {
-    display: flex;
-  }
-
-  /* CONTENT */
   &__content {
-    flex: 1 1 auto;
-    padding-left: 110px;
+    position: relative;
+    z-index: 1;
+    padding-top: 4rem; /* breathing on mobile */
+    padding-bottom: 7.5rem; /* leave room for location card */
   }
 
   &__title {
-    font-size: $titleSizeH1;
-    font-weight: 700;
     line-height: 1.05;
-    font-weight: 300;
-    // margin: 0;
-    // text-align: center;
+    font-weight: 700;
+    @include mx.fluid-type(48, 72); /* ~1.75rem → 4rem */
+    letter-spacing: 0;
   }
 
   &__subtitle {
-    font-weight: 400;
-    font-size: clamp(1.125rem, 2vw + 0.5rem, 1.75rem);
-    margin: 0;
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    @include mx.fluid-type(16, 22); /* subtle scale */
   }
 
-  &__underConstruction-wrapper {
-    padding: 15px;
-    background: #fffce8;
-    opacity: 0.7;
+  /* under construction */
+  &__uc {
     width: fit-content;
-    margin: 0 auto;
+    background: #fffce8;
+    opacity: 0.9;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
   }
-
-  &__underConstruction {
-    font-weight: 400;
-    font-size: clamp(1.125rem, 2vw + 0.5rem, 0.75rem);
-    margin: 0;
+  &__uc-text {
     color: #212121;
+    @include mx.fluid-type(12, 14);
+    font-weight: 500;
+  }
+
+  /* location card placement */
+  &__location {
+    z-index: 1;
+    /* on small screens, card becomes full width and sits slightly above bottom edge */
+    left: 0;
+    right: 0;
+
+    .card-location {
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    transition: background-color 0.3s, color 0.3s;
+    color: v.$white;
+    border: 1px solid v.$white;
+    border-radius: 50px;
+    font-size: v.$ctaSizeText;
+    &:hover {
+      border: 1px solid v.$white;
+      background-color: v.$white;
+      color: v.$secondColor;
+    }
+  }
+
+  @include bp.up(md) {
+    &__content {
+      padding-top: 5rem;
+      padding-bottom: 9rem;
+    }
+    &__location {
+      width: 360px;
+      left: auto;
+    }
+  }
+
+  @include bp.up(lg) {
+    &__content {
+      padding-left: 3rem;
+    }
+    &__location {
+      width: 345px !important;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
-// ─────────────────────────────  LOCATION CARD  ─────────────────────────────────────────────── */
-
-.card-location__container {
-  width: 315px !important;
-  //   height: 160px;
-  position: absolute;
-  bottom: -68px;
-  right: 12px;
-}
-
+/* ─── LOCATION CARD (Bootstrap card with minimal BEM) ─────────────────── */
 .card-location {
-  /* required size */
-  width: 100%;
-  max-width: 560px;
-  height: 155px;
-
-  /* layout */
-  display: flex; /* rail + body side-by-side */
-  align-items: stretch;
-  overflow: hidden;
   border: 0;
   border-radius: 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  background-color: $secondColor;
+  box-shadow: v.$shadow-soft;
+  background-color: v.$bg-soft; /* rail background; body is white */
+  overflow: hidden;
 
-  /* left rail */
   &__rail {
-    flex: 0 0 56px; /* fixed rail width */
-    // background: #f4f7fb; /* soft blue/grey */
+    flex: 0 0 56px;
+    background: v.$secondColor;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
   &__rail-text {
     display: inline-block;
     transform: rotate(-90deg);
-    transform-origin: center;
     white-space: nowrap;
     text-transform: uppercase;
-    font-size: 0.64rem;
     font-weight: 600;
+    font-size: 0.64rem;
     letter-spacing: 0.35rem;
-    color: $grey;
+    color: v.$white;
     line-height: 1;
-    top: 40px;
     position: relative;
+    top: 0;
   }
 
-  /* card body */
   &__body {
-    flex: 1 1 auto;
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 1.25rem; /* compact on mobile */
-    background: #fff; /* ensure contrast */
-    // height: 155px;
+    padding: 2.5rem 1.5rem;
   }
 
   &__subtitle {
-    margin: 0 0 0.35rem 0;
+    margin: 0 0 0.35rem;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    font-size: 0.42rem;
     font-weight: 600;
-    color: #6b7380; /* muted text */
+    color: #6b7380;
+    font-size: 0.7rem;
   }
 
   &__title {
     margin: 0;
     font-weight: 800;
-    font-size: 1rem !important; /* ~16px mobile */
+    color: #0f1222;
+    @include mx.fluid-type(16, 20);
     line-height: 1.25;
-    color: #0f1222; /* near-black */
   }
-}
 
-/* ===== Responsive refinements (mobile-first) ===== */
-@media (min-width: 576px) {
-  /* sm */
-  .card-location {
+  @include bp.up(sm) {
     &__rail {
       flex-basis: 64px;
     }
     &__body {
-      padding: 1.25rem 1.5rem;
-    }
-    &__title {
-      font-size: 1.125rem;
+      padding: 2.5rem 1.5rem;
     }
   }
-}
-
-@media (min-width: 992px) {
-  /* lg */
-  .card-location {
+  @include bp.up(lg) {
     &__rail {
       flex-basis: 72px;
     }
     &__subtitle {
-      font-size: 0.8rem;
+      font-size: 0.6rem;
       letter-spacing: 0.3rem;
     }
     &__title {
-      font-size: 1.25rem;
+      @include mx.fluid-type(14, 16);
     }
   }
 }

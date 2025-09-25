@@ -1,0 +1,12 @@
+@use "sass:math";
+@function rem($px, $base: 16) {
+  @return (math.div($px, $base)) * 1rem;
+}
+@function em($px, $ctx: 16) {
+  @return (math.div($px, $ctx)) * 1em;
+}
+
+// 8-digit hex support sugar (e.g., color-alpha(#0b0f1a, .6))
+@function color-alpha($hex, $alpha) {
+  @return rgba(red($hex), green($hex), blue($hex), $alpha);
+}

@@ -1,11 +1,13 @@
-@import "src/variables.scss";
+// @import "src/variables.scss";
+@use "styles/variables" as v;
+@use "styles/mixins" as mx;
 
 .underconstruction {
   text-align: center;
   padding: 1rem;
-  background-color: $forthColor;
+  background-color: v.$forthColor;
   height: 100vh;
-  color: $mainColor;
+  color: v.$mainColor;
 
   img {
     max-width: 300px; // Default width for the logo
@@ -14,7 +16,7 @@
 
   .message em {
     font-style: italic;
-    color: $mainColor;
+    color: v.$mainColor;
   }
 }
 

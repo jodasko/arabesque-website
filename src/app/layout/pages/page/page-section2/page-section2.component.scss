@@ -1,4 +1,6 @@
-@import "src/variables.scss";
+// @import "src/variables.scss";
+@use "styles/variables" as v;
+@use "styles/mixins" as mx;
 
 .page-section2 {
   color: white;
@@ -42,7 +44,7 @@
         font-size: 13px;
         font-weight: normal;
         color: #fff;
-        font-family: $mainFont;
+        font-family: v.$mainFont;
         margin-top: 10px;
         padding-top: 0;
       }
@@ -79,7 +81,7 @@
         list-style: none;
         li {
           margin-right: 0;
-          font-family: $mainFont;
+          font-family: v.$mainFont;
           font-size: 13px;
           color: greenyellow;
           margin-bottom: 7px;

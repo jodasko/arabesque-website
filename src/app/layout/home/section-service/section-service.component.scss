@@ -1,13 +1,27 @@
-@import "src/variables.scss";
+@use "styles/variables" as v;
+@use "styles/mixins" as mx;
+@use "styles/breakpoints" as bp;
+
+.services {
+  &__btn {
+    transition: background-color 0.3s, color 0.3s;
+    color: v.$white;
+    border: 1px solid v.$secondColor;
+    border-radius: 50px;
+    font-size: v.$ctaSizeText;
+    background-color: v.$secondColor;
+    &:hover {
+      border: 1px solid v.$secondColor;
+      background-color: v.$white;
+      color: v.$secondColor;
+    }
+  }
+}
 
 .card-title {
-  font-size: $subtileSizeText2;
+  font-size: v.$subtileSizeText2;
 }
 
 .card-text {
-  font-size: $contentSizeText;
-}
-
-.services .card img {
-  height: 250px;
+  font-size: v.$contentSizeText;
 }

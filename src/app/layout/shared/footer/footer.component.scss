@@ -1,58 +1,118 @@
-/* Roboto (only if not already global) */
-@import "src/variables.scss";
+// @use "styles/variables" as v;
+
+// .footer {
+//   &__aboutus {
+//     background-color: v.$secondColor;
+//     // .card {
+//     //   width: 80%;
+
+//     //   &-title {
+//     //     font-size: v.$titleSizeH2;
+//     //   }
+
+//     //   &-text {
+//     //     small {
+//     //       bottom: 20px;
+//     //       font-size: v.$ctaSizeText;
+//     //       letter-spacing: 0.255rem;
+//     //     }
+//     //     p {
+//     //       font-size: v.$contentSizeText;
+//     //     }
+//     //   }
+//     // }
+//   }
+
+//   &__navigation {
+//     padding-top: 0;
+
+//     &-title {
+//       letter-spacing: 0.325rem;
+//     }
+//   }
+
+//   &__socialNetwork {
+//     padding-top: 0;
+
+//     &-title {
+//       letter-spacing: 0.325rem;
+//     }
+//   }
+
+//   &__card-image {
+//     width: 300px;
+//   }
+
+//   &__card-bar {
+//     width: 6%;
+//     height: 100%;
+//     top: 0;
+//     left: 0;
+//     object-fit: cover;
+//     object-position: center;
+//     background-color: #090b19;
+//     opacity: 0.6;
+//     position: absolute;
+//   }
+// }
+
+@use "styles/variables" as v;
+@use "styles/breakpoints" as bp;
 
 .footer {
   &__aboutus {
-    background-color: $secondColor;
-    // .card {
-    //   width: 80%;
-
-    //   &-title {
-    //     font-size: $titleSiweh2;
-    //   }
-
-    //   &-text {
-    //     small {
-    //       bottom: 20px;
-    //       font-size: $ctaSizeText;
-    //       letter-spacing: 0.255rem;
-    //     }
-    //     p {
-    //       font-size: $contentSizeText;
-    //     }
-    //   }
-    // }
+    background-color: v.$secondColor;
   }
 
-  &__navigation {
-    padding-top: 0;
-
-    &-title {
-      letter-spacing: 0.325rem;
+  /* Logo */
+  &__aboutus-logo {
+    max-width: 180px; /* mobile */
+    height: auto;
+    @include bp.up(md) {
+      max-width: 200px;
+    }
+    @include bp.up(lg) {
+      max-width: 220px;
     }
   }
 
-  &__socialNetwork {
-    padding-top: 0;
+  /* Section headings (Navigation / Follow us) */
+  &__section-title {
+    letter-spacing: 0.325rem;
+    opacity: 0.9;
+  }
 
-    &-title {
-      letter-spacing: 0.325rem;
+  /* Links list */
+  &__nav {
+    display: grid;
+    row-gap: 0.5rem; /* mobile tighter */
+    @include bp.up(md) {
+      row-gap: 0.6rem;
     }
   }
 
-  &__card-image {
-    width: 300px;
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    i {
+      color: #fff;
+    } /* social icons */
   }
 
-  &__card-bar {
-    width: 6%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    object-position: center;
-    background-color: #090b19;
-    opacity: 0.6;
-    position: absolute;
+  /* Column separators: only from lg+ to avoid cramped mobile look */
+  .col-lg-4 {
+    @include bp.up(lg) {
+      &:not(:first-child) {
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      padding-left: 2rem; /* offset from border */
+    }
   }
 }

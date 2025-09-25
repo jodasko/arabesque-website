@@ -15,6 +15,9 @@ export class HeroComponent implements OnInit {
   subTitle: string = '';
   underConstructionText: string = '';
   ctaButtonText = 'HERO_CTA';
+  location = 'HERO_LOCATION';
+  region = 'HERO_LOCATION_REGION';
+  locationTitle = 'HERO_LOCATION_TITLE';
 
   constructor() {}
 

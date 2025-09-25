@@ -29,20 +29,20 @@
 </section>
 
 <section class="section-aboutus__card">
-  <div class="card border-0 bg-transparent m-auto">
+  <div class="card border-0 bg-transparent">
     <div class="row g-0">
       <div class="section-aboutus__card-bar"></div>
-      <div class="col-md-4">
+      <div class="col-md-6 col-lg-4">
         <img
           [src]="bgImageCard"
           class="section-aboutus__card-image"
           [alt]="titleCard | translate"
         />
       </div>
-      <div class="col-md-8">
+      <div class="col-md-6 col-lg-8">
         <div class="card-body">
           <div class="row">
-            <div class="col-6 pt-4">
+            <div class="col-lg-6 col-xs-12 pt-4">
               <h5 class="card-title text-white lh-1 my-0">
                 {{ titles[0] | translate | uppercase }}
               </h5>
@@ -55,7 +55,7 @@
                 >
               </p>
             </div>
-            <div class="col-6 pt-4">
+            <div class="col-lg-6 col-xs-12 pt-4">
               <p class="card-text text-white">
                 {{ textCard1 | translate }}
               </p>

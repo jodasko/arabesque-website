@@ -1,73 +1,50 @@
 <section class="hero">
-  <div class="banner" [ngStyle]="backgroundStyle">
-    <div
-      class="banner__content d-flex flex-column justify-content-center w-100"
-    >
-      <!-- TITLE -->
+  <!-- Background image via [ngStyle], dark overlay handled in CSS -->
+  <div class="hero__bg" [ngStyle]="backgroundStyle"></div>
 
-      <div class="banner__title">
-        <ng-container
-          *ngIf="titleLines && titleLines.length > 0; else oneTitle"
-        >
-          <div *ngFor="let line of titleLines; let last = last">
-            {{ line | translate }}<br *ngIf="!last" />
-          </div>
+  <div
+    class="container d-flex position-relative flex-column justify-content-center align-items-center vh-100"
+  >
+    <!-- Title (multi-line or single) -->
+    <h1 class="hero__title fw-normal m-0">
+      <ng-container *ngIf="titleLines?.length; else singleTitle">
+        <ng-container *ngFor="let line of titleLines; let last = last">
+          {{ line | translate }}<br *ngIf="!last" />
         </ng-container>
-      </div>
-      <!-- SUBTITLE -->
-      <p *ngIf="subTitle" class="banner__subtitle">
-        {{ subTitle | translate }}
+      </ng-container>
+      <ng-template #singleTitle>{{ title | translate }}</ng-template>
+    </h1>
+
+    <!-- Subtitle -->
+    <p *ngIf="subTitle" class="hero__subtitle mb-0">
+      {{ subTitle | translate }}
+    </p>
+
+    <!-- CTA -->
+    <div class="mt-4 mt-md-5" *ngIf="ctaButtonText">
+      <button type="button" class="btn btn-lg px-5 hero__btn">
+        {{ ctaButtonText | translate | uppercase }}
+      </button>
+    </div>
+
+    <!-- Under-construction note -->
+    <div *ngIf="underConstructionText" class="hero__uc mt-4">
+      <p class="hero__uc-text mb-0">
+        {{ underConstructionText | translate }}
       </p>
-
-      <cta-button-component
-        class="mt-4 mt-5"
-        *ngIf="ctaButtonText"
-        [ctaButtonText]="ctaButtonText"
-      ></cta-button-component>
-
-      <div
-        class="card-location__container d-flex flex-column justify-content-start w-100"
-      >
-        <div class="row">
-          <div class="col-2 g-0">
-            <div class="card card-location">
-              <div class="card-location__rail" aria-hidden="true">
-                <span class="card-location__rail-text">LOCATION</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-10 g-0">
-            <div class="card-body card-location__body">
-              <div class="row">
-                <div class="col-12">
-                  <p class="card-location__subtitle mb-2">ALPES MARITIMES</p>
-                </div>
-                <div class="col-12">
-                  <h3 class="card-location__title mb-0">
-                    Menuiserie sur mesure
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>
+  <div class="hero__location d-flex flex-column justify-content-start w-100">
+    <div class="card card-location d-flex flex-row">
+      <div class="card-location__rail" aria-hidden="true">
+        <span class="card-location__rail-text">{{ location | translate }}</span>
       </div>
-
-      <!-- MESSAGE UNDERCONSTRUCTION -->
-      <div
-        *ngIf="underConstructionText"
-        class="hero__underConstruction-wrapper"
-      >
-        <p class="banner__underConstruction">
-          {{ underConstructionText | translate }}
-        </p>
+      <div class="card-body card-location__body">
+        <p class="card-location__subtitle mb-2">{{ region | translate }}</p>
+        <h3 class="card-location__title mb-0">
+          {{ locationTitle | translate }}
+        </h3>
       </div>
     </div>
   </div>
 </section>
-
-<ng-template #oneTitle>
-  <div class="banner__title w-50">
-    {{ title | translate }}
-  </div>
-</ng-template>

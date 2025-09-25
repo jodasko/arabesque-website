@@ -1,13 +1,13 @@
-@import "src/variables.scss";
+@use "styles/variables" as v;
 
 .btn-radius {
   transition: background-color 0.3s, color 0.3s;
-  color: $white;
-  border: 1px solid $white;
+  color: v.$white;
+  border: 1px solid v.$white;
   border-radius: 50px;
-  font-size: $ctaSizeText;
+  font-size: v.$ctaSizeText;
   &:hover {
-    background-color: $white;
-    color: $black;
+    background-color: v.$white;
+    color: v.$secondColor;
   }
 }

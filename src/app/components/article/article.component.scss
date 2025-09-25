@@ -1,4 +1,6 @@
-@import "src/variables.scss";
+// @import "src/variables.scss";
+@use "styles/variables" as v;
+@use "styles/mixins" as mx;
 
 .article1 {
   // color: white;
@@ -22,25 +24,25 @@
   &__headline {
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    font-size: $headlineSizeText;
-    color: $headLineColor;
+    font-size: v.$headlineSizeText;
+    color: v.$headLineColor;
     margin-bottom: 0.5rem;
   }
 
   &__arrow {
-    color: $secondColor;
+    color: v.$secondColor;
     font-size: 1rem;
   }
 
   &__title {
-    font-size: $subtileSize1;
-    color: $titleColor;
+    font-size: v.$subtileSize1;
+    color: v.$titleColor;
     font-weight: 600;
     margin-bottom: 1rem;
   }
 
   &__text {
-    color: $text;
+    color: v.$text;
     font-size: 1rem;
     line-height: 1.6;
   }

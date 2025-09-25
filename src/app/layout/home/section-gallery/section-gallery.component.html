@@ -1,28 +1,26 @@
-<section class="section-gallery container">
-  <div class="col-12 col-lg-2 text-lg-start text-center mb-4 mb-lg-0">
-    <h2 class="title display-4 fw-light lh-sm d-none d-lg-block">
-      {{ title | translate }}<br />
-    </h2>
+<section class="section-gallery container px-0">
+  <div class="row align-items-start">
+    <div class="col-12 text-md-start text-center mb-4 mb-lg-0">
+      <h2 class="title display-4 fw-light lh-sm">
+        {{ title | translate }}<br />
+      </h2>
+    </div>
 
-    <h2 class="title display-4 fw-light lh-sm d-block d-lg-none">Who We Are</h2>
-  </div>
-
-  <div class="gallery-wrapper">
-    <!-- <div class="team-description" [class.visible]="hoveredMember">
-      <h5 *ngIf="hoveredMember">{{ hoveredMember.name }}</h5>
-      <p class="role" *ngIf="hoveredMember">{{ hoveredMember.role }}</p>
-      <p class="bio" *ngIf="hoveredMember">{{ hoveredMember.description }}</p>
-    </div> -->
-
-    <div class="gallery">
-      <div
-        class="gallery-image"
-        *ngFor="let image of galleryData | translate; let i = index"
-        [class.middle-img]="i % 3 === 1"
-        [class.selected]="hoveredMember === image"
-        (mouseenter)="hoveredMember = image"
-      >
-        <img [src]="resolveImage(image.image)" [alt]="image.title" />
+    <div class="col-12">
+      <!-- 1 col on mobile, 3 cols from md+ (>=768px) -->
+      <div class="row row-cols-1 row-cols-md-3 g-2 g-md-3 gallery">
+        <div
+          class="col"
+          *ngFor="let image of galleryData | translate; let i = index"
+        >
+          <div class="gallery__item" [class.is-mid]="i % 3 === 1">
+            <img
+              class="gallery__img"
+              [src]="resolveImage(image.image)"
+              [alt]="image.title"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

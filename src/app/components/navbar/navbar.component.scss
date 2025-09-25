@@ -1,12 +1,62 @@
-@import "src/variables.scss";
+// @import "src/variables.scss";
+@use "styles/variables" as v;
+@use "styles/breakpoints" as bp;
 
 select,
 select::picker(select) {
   appearance: base-select;
 }
 
+/** Mobile **/
+.navbar {
+  width: 100%;
+}
+
 .navbar-toggler {
   box-shadow: none !important;
+}
+
+.navbar-logo__offset-top {
+  margin-top: -10px;
+  padding-top: 10px;
+  max-height: 100px;
+  min-height: 80px;
+  height: 100%;
+  width: 100%;
+  @include bp.up(lg) {
+    width: 40%;
+  }
+  @include bp.up(xl) {
+    width: 30%;
+  }
+  @include bp.up(xxl) {
+    width: 23%;
+  }
+}
+
+.container-fluid {
+  padding-right: 0;
+}
+
+.img-fluid {
+  width: 65%;
+  @include bp.up(md) {
+    width: 35%;
+  }
+  @include bp.up(lg) {
+    width: 90%;
+  }
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: 10px;
+  border: 1px solid v.$secondColor;
+  top: 20px;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); // turns black default into white
 }
 
 // background color for the navbar on tab and mobile
@@ -16,30 +66,35 @@ nav {
     background-color: transparent;
   }
   &.bg-colored {
-    background-color: $white; // or any desired color
+    background-color: v.$white; // or any desired color
     opacity: 0.9;
   }
 }
 
 nav.navbar {
   z-index: 1000;
+  .navbar-brand {
+    cursor: pointer;
+  }
+
   &.solid-navbar {
+    // onScrolling
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* solid after scroll */
     &__home,
     &__experiences {
-      background: $white !important;
+      background: v.$white !important;
       transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
       .nav-link {
         transition: 0.3s ease, left 0.3s ease;
-        color: $mainColor;
-        font-weight: lighter;
+        color: v.$mainColor;
+        font-weight: normal;
 
         &.active {
           transition: 0.1s ease, left 0.3s ease;
-          color: $forthColor;
+          color: v.$forthColor;
           &::after {
-            background: $forthColor;
+            background: v.$forthColor;
             bottom: 2px;
             content: "";
             display: block;
@@ -54,25 +109,28 @@ nav.navbar {
       }
 
       .nav-text {
-        color: $mainColor !important; /* inverted link color */
+        color: v.$mainColor !important; /* inverted link color */
       }
     }
   }
 
-  .navbar-brand {
-    cursor: pointer;
+  &.bg-colored {
+    .nav-link {
+      // transition: 0.3s ease, left 0.3s ease;
+      color: v.$secondColor;
+      font-weight: 500;
+    }
   }
 }
 
 .navbar-nav .nav-link {
   text-transform: uppercase;
-  color: $white;
+  color: v.$white;
   font-stretch: extra-expanded;
-  font-weight: lighter;
+  font-weight: normal;
   cursor: pointer;
-  &:hover,
-  &.active {
-    color: $secondColor;
+  &:hover {
+    color: v.$secondColor;
   }
 
   &.underline {
@@ -80,7 +138,7 @@ nav.navbar {
     position: relative;
 
     &::after {
-      background: $secondColor;
+      background: v.$secondColor;
       bottom: 2px;
       content: "";
       display: block;
@@ -147,36 +205,11 @@ nav.navbar {
     width: 30px;
     padding: 0;
     &:checked {
-      font-weight: lighter;
+      font-weight: normal;
       background-color: #ffffff;
-      color: $secondColor;
+      color: v.$secondColor;
       width: 20px;
       border: 0;
     }
   }
-}
-
-nav.navbar {
-  z-index: 1000;
-  &.solid-navbar {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* solid after scroll */
-    &__home,
-    &__experiences {
-      background: $white !important;
-      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-
-      .nav-text {
-        color: $secondColor !important; /* inverted link color */
-      }
-    }
-  }
-
-  .navbar-brand {
-    cursor: pointer;
-  }
-}
-
-.logo-wrapper__offset-top {
-  margin-top: -10px;
-  padding-top: 10px;
 }

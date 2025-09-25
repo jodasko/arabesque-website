@@ -7,6 +7,7 @@ import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { StickyNavDirective } from 'src/app/directives/sticky-nav.directive';
 import { SHARED_STANDALONE_IMPORTS } from '../shared-standalone.imports';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'navbar-component',
@@ -16,12 +17,13 @@ import { SHARED_STANDALONE_IMPORTS } from '../shared-standalone.imports';
     StickyNavDirective,
     RouterModule,
     CarouselModule,
+    NgbModule,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
-  @Input() logo?: string = 'logo';
+  @Input() logo: string = 'logo';
   @Input() logoTagline: string | null = null;
   @Input() imageExt?: 'jpg' | 'png' = 'png';
   @Input() alt?: string = 'logo';

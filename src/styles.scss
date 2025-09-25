@@ -1,4 +1,13 @@
-@import "src/variables.scss";
+/* Use (don’t forward) your shared API globally if you want: */
+@use "styles/index" as *;
+
+/* any truly global CSS goes here */
+:root {
+  color-scheme: light;
+}
+body {
+  font-family: $mainFont !important;
+}
 
 /* ──────────────────────────── Base (mobile-first) ──────────────────────────── */
 // html,

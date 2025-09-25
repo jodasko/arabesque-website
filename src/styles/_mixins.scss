@@ -1,0 +1,59 @@
+@use "sass:map";
+@use "functions" as fn;
+@use "variables" as v;
+@use "breakpoints" as bp;
+
+@function space($k) {
+  @return map.get(v.$space, $k);
+}
+
+/* Fluid type via clamp(min, vw, max) */
+@mixin fluid-type($min, $max, $vw-min: 320, $vw-max: 1440) {
+  font-size: clamp(
+    fn.rem($min),
+    calc(
+      (#{$max - $min}) * (100vw - #{$vw-min}px) / (#{$vw-max - $vw-min}) + #{fn.rem(
+          $min
+        )}
+    ),
+    fn.rem($max)
+  );
+}
+
+/* Visually-hidden (accessibility) */
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Card shell with BEM block name */
+@mixin card-shell($block) {
+  #{$block} {
+    border: 0;
+    border-radius: v.$radius;
+    box-shadow: v.$shadow-soft;
+    overflow: hidden;
+    background: #fff;
+    color: v.$ink;
+    font-family: v.$mainFont;
+  }
+}
+
+/* Simple overlay */
+@mixin overlay($color: rgba(0, 0, 0, 0.45)) {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: $color;
+    pointer-events: none;
+  }
+}

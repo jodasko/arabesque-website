@@ -8,7 +8,7 @@
   "NAV_MENU_3": "work",
   "NAV_MENU_4": "gallery",
   "NAV_MENU_5": "contact",
-  "NAV_TAGLINE": "menuiserie",
+  "NAV_TAGLINE": "joinery",
 
   "FOOTER_NAV_MENU_1": "menu 1",
   "FOOTER_NAV_MENU_2": "menu 2",
@@ -18,10 +18,13 @@
   "FOOTER_ALLRIGHTS": "© all rights reserved",
   "FOOTER_CTA": "ACTION CTA",
 
-  "HERO_TITLE": "Quality joinery for your home",
+  "HERO_TITLE": "Bespoke joinery for your home",
   "HERO_TITLE_1": "Quality joinery for",
   "HERO_TITLE_2": "your home",
-  "HERO_CTA": "schedule a call",
+  "HERO_CTA": "Our services",
+  "HERO_LOCATION": "Located",
+  "HERO_LOCATION_REGION": "in the Alpes-Maritimes",
+  "HERO_LOCATION_TITLE": "Custom joinery",
 
   "SERVICE_HEADLINE": "service",
   "SERVICE_TITLE": "we do it best.",

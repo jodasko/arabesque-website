@@ -11,10 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { LanguageService } from './services/language/language.service';
 import { LayoutModule } from './layout/layout.module';
 
-export function initLang(languageService: LanguageService): () => void {
-  return () => languageService.initLanguage();
-}
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

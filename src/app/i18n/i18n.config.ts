@@ -1,3 +1,3 @@
-export type SupportedLang = 'en' | 'fr' | 'ar';
+export type SupportedLang = 'fr' | 'en' | 'ar';
 
-export const SUPPORTED_LANGUAGES: SupportedLang[] = ['en', 'fr', 'ar'];
+export const SUPPORTED_LANGUAGES: SupportedLang[] = ['fr', 'en', 'ar'];
