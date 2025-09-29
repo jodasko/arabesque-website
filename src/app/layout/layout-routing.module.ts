@@ -28,7 +28,7 @@ export const layoutRoutes: Routes = [
       ),
   },
   {
-    path: 'underconstruction',
+    path: 'construction',
     loadChildren: () =>
       import('./pages/underconstruction-page/undersconstruction.module').then(
         (m) => m.UnderconstructionModule

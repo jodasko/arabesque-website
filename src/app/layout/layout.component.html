@@ -1,7 +1,3 @@
-<app-header
-  *ngIf="scrollService.getCurrentUrl() !== '/underconstruction'"
-></app-header>
+<app-header *ngIf="displayHeader"></app-header>
 <router-outlet></router-outlet>
-<app-footer
-  *ngIf="scrollService.getCurrentUrl() !== '/underconstruction'"
-></app-footer>
+<app-footer *ngIf="displayFooter"></app-footer>

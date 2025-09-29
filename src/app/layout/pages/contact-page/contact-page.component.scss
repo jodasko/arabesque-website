@@ -1,3 +1,8 @@
+/*Phone field*/
+.iti__tel-input {
+  border: 0;
+}
+
 textarea:focus,
 input:focus {
   outline: none;
@@ -37,8 +42,12 @@ input:focus {
     min-height: 75vh;
     padding: 1.5rem 1rem;
     font-family: "Roboto", sans-serif;
-    background: url(/assets/images/tpl-banner.jpg) center / cover no-repeat;
-    padding-top: 245px;
+    // background: url(/assets/images/sb-ccd-3.png) center / cover no-repeat;
+    padding-top: 145px;
+  }
+
+  &__question {
+    text-transform: uppercase;
   }
 
   &__label {
@@ -170,6 +179,6 @@ input:focus {
     margin-top: 0;
   }
   .contact__email a {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }

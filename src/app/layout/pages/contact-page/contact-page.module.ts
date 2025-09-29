@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 
 import { SharedModule } from '../../shared/shared.module';
 import { ContactPageComponent } from './contact-page.component';
@@ -13,6 +14,7 @@ import { ContactPageRoutingModule } from './contact-page-routing.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    NgxIntlTelInputModule,
     ContactPageRoutingModule,
     TranslateModule,
     SharedModule,

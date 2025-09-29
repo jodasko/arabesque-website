@@ -1,0 +1,72 @@
+@use "variables" as *;
+
+/*Phone field*/
+.iti {
+  width: 100%;
+}
+
+.iti__tel-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #4fc8b9;
+  color: #4fc8b9;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+.iti .dropdown-menu.country-dropdown {
+  border: 0;
+  width: fit-content;
+  padding: 1px;
+  border-collapse: collapse;
+  border-bottom: 1px solid #4fc8b9;
+  border-right: 1px solid #4fc8b9;
+  border-left: 1px solid #4fc8b9;
+  border-radius: 0;
+  margin: 0;
+}
+
+.selected-dial-code {
+  color: #aaa;
+}
+
+.iti .dropdown-menu.country-dropdown {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-color: #c7cace;
+  margin-top: -1px;
+}
+
+.iti .iti__country-list {
+  box-shadow: none;
+  font-size: 14px;
+  margin-left: 0;
+  width: 244px;
+  max-height: 170px;
+}
+
+.iti__flag-container.open + input {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.iti .search-container input {
+  font-size: 14px;
+  border-color: #c7cace;
+  border-radius: 0;
+  padding: 5px 10px;
+}
+
+.iti .search-container input:focus {
+  outline: none;
+}
+
+strong,
+pre {
+  color: #000;
+}

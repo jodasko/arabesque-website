@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideHttpClient } from '@angular/common/http';
 
 import { NgxGoogleAnalyticsModule } from 'ngx-google-analytics';
@@ -15,6 +16,7 @@ import { LayoutModule } from './layout/layout.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgxGoogleAnalyticsModule.forRoot(environment.trackAnalyticID),
     I18nModule,

@@ -8,29 +8,34 @@
     </div>
 
     <div class="contact__content row">
-      <div class="me-4 col-12 col-md-4 contact__info">
+      <div
+        class="me-4 col-12 col-md-4 contact__info"
+        [ngStyle]="{
+          backgroundImage: 'url(assets/images/' + bgImg + ')'
+        }"
+      >
         <div class="contact__logo mb-4">
           <a [routerLink]="['/']">
             <img
-              src="/assets/images/logo.png"
-              alt="{{ 'CONTACT_PAGE_COMPANY_NAME' | translate }}"
-              height="36"
+              [src]="logoImg"
+              alt="{{ 'CODESTACK_STUDIO' | translate }}"
+              height="100"
             />
-            <span class="ms-2">{{
-              "CONTACT_PAGE_COMPANY_NAME" | translate
-            }}</span>
+            <!-- <span class="ms-2">{{ "CODESTACK_STUDIO" | translate }}</span> -->
           </a>
         </div>
         <div class="contact__box">
-          <h6 class="contact__label">{{ "CONTACT_PAGE_EMAIL" | translate }}</h6>
+          <h6 class="contact__label text-white">
+            {{ "CONTACT_PAGE_EMAIL" | translate | lowercase }}
+          </h6>
           <p class="contact__email">
             <a
-              class="nav-link"
+              class="nav-link p-2"
               href="mailto:{{ 'CONTACT_PAGE_CSSTUDIO_EMAIL' | translate }}"
-              >{{ "CONTACT_PAGE_CSSTUDIO_EMAIL" | translate }}</a
+              >{{ "CONTACT_PAGE_CSSTUDIO_EMAIL" | translate | lowercase }}</a
             >
           </p>
-          <h6 class="contact__label mt-4">
+          <h6 class="contact__label mt-4 text-white">
             {{ "CONTACT_PAGE_CSSTUDIO_SOCIAL_LINKS" | translate }}
           </h6>
           <div class="contact__social">
@@ -43,10 +48,10 @@
                   'github'
                 )
               "
-              href="https://github.com/jodasko"
+              href="#"
               target="_blank"
             >
-              <i class="fab fa-github"></i>
+              <i class="fa-brands fa-facebook me-2"></i>
             </a>
             <a
               class="contact__icon"
@@ -57,10 +62,24 @@
                   'github'
                 )
               "
-              href="https://www.linkedin.com/in/carlossalazar10/"
+              href="#"
               target="_blank"
             >
-              <i class="fab fa-linkedin-in"></i>
+              <i class="fa-brands fa-instagram me-2"></i>
+            </a>
+            <a
+              class="contact__icon"
+              (click)="
+                analyticsService.sendAnalyticEvent(
+                  'click_linkedin',
+                  'footer',
+                  'github'
+                )
+              "
+              href="#"
+              target="_blank"
+            >
+              <i class="fa-brands fa-tiktok me-2"></i>
             </a>
           </div>
         </div>
@@ -134,20 +153,34 @@
           </div>
 
           <div class="contact__group">
-            <label for="company" class="contact__question">{{
-              "CONTACT_PAGE_QUESTION_COMPANY" | translate
-            }}</label>
-            <input
-              id="company"
-              name="company"
-              class="contact__input"
-              type="text"
-              formControlName="company"
-              placeholder="{{
-                'CONTACT_PAGE_QUESTION_COMPANY_PLACEHOLDER' | translate
-              }}"
-              autocomplete="off"
-            />
+            <label for="phone" class="contact__question"
+              >{{ "CONTACT_PAGE_QUESTION_TELEPHONE" | translate }}
+              <span class="contact__question-mandatory">*</span></label
+            >
+            <ngx-intl-tel-input
+              id="phone"
+              name="phone"
+              formControlName="phone"
+              [onlyCountries]="EUROPE_ONLY"
+              [cssClass]="'contact__input'"
+              [preferredCountries]="preferredCountries"
+              [enableAutoCountrySelect]="true"
+              [enablePlaceholder]="true"
+              [searchCountryFlag]="true"
+              [searchCountryField]="[searchCountryField.All]"
+              [selectFirstCountry]="false"
+              [separateDialCode]="true"
+              [phoneValidation]="true"
+              [numberFormat]="phoneNumberFormat.National"
+              [maxLength]="15"
+              [selectedCountryISO]="countryISO.France"
+            ></ngx-intl-tel-input>
+            <div
+              *ngIf="submitted && f.phone.valid === false && f.phone.touched"
+              class="contact__error"
+            >
+              {{ "CONTACT_PAGE_QUESTION_TELEPHONE_ERROR_02" | translate }}
+            </div>
           </div>
 
           <div class="contact__group">
@@ -187,7 +220,7 @@
           </div>
           <div class="contact__group">
             <button type="submit" class="contact__submit">
-              {{ "CONTACT_PAGE_FORM_SUBMIT_CTA" | translate | uppercase }}
+              {{ "CONTACT_PAGE_CTA" | translate | uppercase }}
               <i class="bi bi-arrow-right"></i>
             </button>
           </div>
