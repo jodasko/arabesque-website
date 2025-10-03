@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnalyticsService } from 'src/app/services/analytics/analytics.service';
+import { ScrollService } from 'src/app/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-hero',
@@ -19,12 +20,20 @@ export class HeroComponent implements OnInit {
   region = 'HERO_LOCATION_REGION';
   locationTitle = 'HERO_LOCATION_TITLE';
 
-  constructor() {}
+  constructor(private scrollService: ScrollService) {}
 
   ngOnInit(): void {}
 
   get backgroundStyle(): string | null {
     return this.bgImage ? this.backgroundImage() : this.backgroundColor();
+  }
+
+  onScrollTo(el: string): void {
+    this.scrollService.scrollTo(this.setIdFormat(el));
+  }
+
+  setIdFormat(value: string): string {
+    return value.toLocaleLowerCase();
   }
 
   private backgroundImage(): any {

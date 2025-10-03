@@ -6,7 +6,7 @@
     class="container d-flex position-relative flex-column justify-content-center align-items-center vh-100"
   >
     <!-- Title (multi-line or single) -->
-    <h1 class="hero__title fw-normal m-0">
+    <h1 class="hero__title fw-normal m-0 text-center">
       <ng-container *ngIf="titleLines?.length; else singleTitle">
         <ng-container *ngFor="let line of titleLines; let last = last">
           {{ line | translate }}<br *ngIf="!last" />
@@ -22,16 +22,13 @@
 
     <!-- CTA -->
     <div class="mt-4 mt-md-5" *ngIf="ctaButtonText">
-      <button type="button" class="btn btn-lg px-5 hero__btn">
+      <button
+        (click)="onScrollTo('services')"
+        type="button"
+        class="btn btn-lg px-5 hero__btn"
+      >
         {{ ctaButtonText | translate | uppercase }}
       </button>
-    </div>
-
-    <!-- Under-construction note -->
-    <div *ngIf="underConstructionText" class="hero__uc mt-4">
-      <p class="hero__uc-text mb-0">
-        {{ underConstructionText | translate }}
-      </p>
     </div>
   </div>
   <div class="hero__location d-flex flex-column justify-content-start w-100">

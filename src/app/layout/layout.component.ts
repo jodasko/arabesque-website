@@ -20,6 +20,6 @@ export class LayoutComponent implements OnInit {
   }
 
   get displayFooter(): boolean {
-    return !(this.scrollService.getCurrentUrl() === '/');
+    return !(this.scrollService.getCurrentUrl() === '/construction');
   }
 }
