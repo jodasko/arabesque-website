@@ -12,65 +12,81 @@
   "NAV_MENU_5": "contact",
   "NAV_TAGLINE": "menuiserie",
 
-  "FOOTER_NAV_MENU_1": "menu 1",
-  "FOOTER_NAV_MENU_2": "menu 2",
-  "FOOTER_NAV_MENU_3": "menu 3",
-  "FOOTER_TAGLINE": "FOOTER TAGLINE",
-  "FOOTER_LOGO": "NAME LOGO",
-  "FOOTER_ALLRIGHTS": "© all rights reserved",
-  "FOOTER_CTA": "ACTION CTA",
+  "FOOTER_NAV_TITLE": "menu",
+  "FOOTER_NAV_MENU_1": "services",
+  "FOOTER_NAV_MENU_2": "à propos",
+  "FOOTER_NAV_MENU_3": "réalisations",
+  "FOOTER_NAV_MENU_4": "galerie",
+  "FOOTER_NAV_MENU_5": "contact",
+  "FOOTER_TAGLINE": "Arabesque Menuiserie est dirigée par SAYED Hassan, Menuisier Maître fort de plus d'années d’expérience. Nous réalisons des ouvrages sur mesure alliant précision artisanale, exigence technique et esthétique contemporaine. Contactez-nous pour concrétiser votre projet de menuiserie haut de gamme.",
+  "FOOTER_LOGO": "arabesque",
+  "FOOTER_ALLRIGHTS": "© all rights reserved | created by CS Studio",
+  "FOOTER_AUTHOR": "created by CS Studio",
+  "FOOTER_CTA": "contact",
+  "FOOTER_SOCIAL_NETWORK_TITLE": "suivez-nous",
+  "FOOTER_SOCIAL_NETWORK_1": "facebook",
+  "FOOTER_SOCIAL_NETWORK_2": "instagram",
+  "FOOTER_SOCIAL_NETWORK_3": "tiktok",
 
-  "HERO_TITLE": "Menuiserie de qualité pour votre maison",
+  "HERO_TITLE": "Menuiserie de qualité et design contemporain.",
   "HERO_TITLE_1": "Menuiserie de qualité",
   "HERO_TITLE_2": "pour votre maison",
-  "HERO_CTA": "notres services",
+  "HERO_CTA": "découvrir nos réalisations",
   "HERO_LOCATION": "Situés dans",
   "HERO_LOCATION_REGION": "les Alpes-Maritimes",
   "HERO_LOCATION_TITLE": "Menuiserie sur mesure",
 
-  "SERVICE_HEADLINE": "service",
-  "SERVICE_TITLE": "we do it best.",
-  "SERVICE_CTA": "view all services",
+  "SERVICE_HEADLINE": "Nos services",
+  "SERVICE_TITLE": "L'expertise en Menuiserie.",
+  "SERVICE_CTA": "découvrir toutes nos expertises",
   "SERVICE_DETAILS": [
     {
       "img": "01.jpg",
-      "title": "Pose de cuisine",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Menuiserie de Cuisine",
+      "description": "Conception et fabrication sur mesure d’agencements intégrés. Nous garantissons des finitions invisibles et une ergonomie calculée.",
+      "longDescription": "De la conception initiale à la pose finale, nous réalisons des cuisines et des aménagements intégrés qui optimisent chaque centimètre de votre espace. Notre expertise de plus de 20 ans garantit des assemblages invisibles, des finitions de qualité supérieure et une planification mathématique pour une ergonomie parfaite et un usage durable. Nous travaillons avec toutes les essences de bois et matériaux haut de gamme, assurant une intégration parfaite des électroménagers et des plans de travail techniques."
     },
     {
       "img": "02.jpg",
-      "title": "Pose de fenêtre alu et PVC",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Portes, Fenêtres & Fermetures Architecturales",
+      "description": "Pose de portes et fenêtres (Bois, Alu, PVC) avec une précision millimétrique essentielle à l’isolation et à l'étanchéité.",
+      "longDescription": "L'installation de vos ouvertures est essentielle pour l'isolation, l'acoustique et la sécurité de votre bâtiment. Que ce soit pour des fenêtres bois sur mesure, de la rénovation de fermetures traditionnelles ou la pose de profilés modernes en aluminium et PVC, nous assurons une étanchéité absolue et une pose d’une précision millimétrique. Notre travail est le garant de la performance énergétique et de la longévité de vos huisseries."
     },
     {
       "img": "03.jpg",
-      "title": "Pose de parquet intérieur",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Parquet & Sols Bois Techniques",
+      "description": "Installation experte de tous parquets. Maîtrise des motifs complexes et préparation parfaite du support pour une durabilité maximale.",
+      "longDescription": "Le choix et la pose du sol définissent l'âme d'une pièce. Nous sommes experts dans la pose de tous types de parquets (flottant, collé, cloué) ainsi que des sols techniques. Notre focus est sur la préparation parfaite du support, la maîtrise des motifs complexes tels que les points de Hongrie ou les bâtons rompus, et des finitions huilées ou vitrifiées durables. Nous assurons un résultat esthétique qui est aussi un investissement structurel à long terme."
     },
     {
       "img": "04.jpg",
-      "title": "Pose de terrasse bois",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Terrasses & Aménagements Extérieurs Durables",
+      "description": "Création de terrasses et pergolas. Expertise structurelle et drainage pour des aménagements extérieurs solides et durables.",
+      "longDescription": "La menuiserie ne s'arrête pas à la porte. Nous concevons et réalisons des terrasses, des pergolas, des abris et des clôtures en bois massif ou composite. Nous appliquons notre savoir-faire en techniques d’ossature et de drainage pour garantir une longévité maximale face aux intempéries et aux charges. Le choix de l'essence et du traitement est crucial, et nous assurons une pose structurelle irréprochable pour votre sécurité et votre sérénité."
     },
     {
       "img": "05.jpg",
-      "title": "Pose de placo-plâtre",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Plafonds, Cloisons & Isolation Intérieure",
+      "description": "Pose de Placo-plâtre et faux plafonds. Nous assurons des ossatures parfaitement d’aplomb et de niveau, base de toute finition de qualité.",
+      "longDescription": "Un travail de menuiserie et d'aménagement parfait exige une préparation de surface parfaite. Nous intervenons en pose de plaques de plâtre (Placo) pour les cloisons, les faux plafonds et l'isolation intérieure. Notre expertise garantit des structures métalliques (ossatures) parfaitement d’aplomb et de niveau, une étape essentielle avant toute finition peinture, carrelage ou menuiserie. Nous fournissons le socle de qualité nécessaire à la réussite globale de votre projet."
     }
   ],
 
   "ABOUT_HEADLINE": "About arabesque",
-  "ABOUT_SUBTITLE": "sayed hassan, menuisier",
-  "ABOUT_CONTENT": "We're innovating the way companies reinvent their office spaces for the remote workforce.",
+  "ABOUT_SUBTITLE": "sayed hassan, Menuisier Maître",
+  "ABOUT_CONTENT": "La menuiserie n'est pas un métier, c'est une exigence. Chaque millimètre compte pour la pérennité de votre projet.",
   "ABOUT_CARD_TITLE": "sayed hassan",
   "ABOUT_CARD_TITLE_1": "sayed",
   "ABOUT_CARD_TITLE_2": "hassan",
-  "ABOUT_CARD_CONTENT_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum. Suspendisse potenti.",
-  "ABOUT_CARD_CONTENT_2": "Vestibulum ut quam luctus, pharetra dui sed, rutrum felis. Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.",
+  "ABOUT_CARD_CONTENT_1": "Depuis plusieurs années, je mets mon expertise au service de projets de construction et de rénovation haut de gamme. Mon approche repose sur une triple exigence : la maîtrise technique du bois, une précision mathématique irréprochable pour garantir la structure, et un sens aigu du détail pour les finitions. La menuiserie, pour moi, c'est l'art d'intégrer la fonction et l'esthétique pour créer des espaces qui durent.",
+  "ABOUT_CARD_CONTENT_2": "Mon expérience me permet de voir le projet dans son ensemble, de la fondation au dernier coup de ciseau. Je travaille en étroite collaboration avec les architectes et les autres corps de métier, assurant une communication fluide en français et arabe. Qu'il s'agisse de restaurer une façade ancienne ou d'installer une cuisine contemporaine, mon engagement est total : livrer un travail où la qualité se voit et se ressent",
   "ABOUT_CARD_FOOT": "antibes - alpes maritimes",
 
   "WORK_HEADLINE": "Découvrez notre travail",
   "WORK_TITLE": "Voyons ce que nous pouvons faire ensemble.",
+  "WORK_EXAMPLE_1": "pose de cuisine",
+  "WORK_EXAMPLE_2": "pose de terrasse bois",
+  "WORK_EXAMPLE_3": "pose de placo-plâtre",
   "WORK_CTA": "Voir tous notre projets",
 
   "GALLERY_TITLE": "Gallery",

@@ -8,6 +8,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
@@ -17,6 +18,7 @@ import { NavbarComponent } from 'src/app/components/navbar/navbar.component';
     RouterModule,
     TranslateModule,
     NavbarComponent,
+    FormsModule,
   ],
   exports: [HeaderComponent, FooterComponent],
 })

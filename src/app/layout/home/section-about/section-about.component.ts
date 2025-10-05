@@ -19,8 +19,8 @@ export class SectionAboutComponent {
   text: string = 'ABOUT_CONTENT';
   subTitle: string = 'ABOUT_SUBTITLE';
   titleCard: string = 'ABOUT_CARD_TITLE';
-  textCard2: string = 'ABOUT_CARD_CONTENT_1';
   textCard1: string = 'ABOUT_CARD_CONTENT_1';
+  textCard2: string = 'ABOUT_CARD_CONTENT_2';
   subTitleCard: string = 'ABOUT_CARD_FOOT';
   bgImageCard = '/assets/images/about/owner.png';
 

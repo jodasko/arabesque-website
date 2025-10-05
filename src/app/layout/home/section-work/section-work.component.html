@@ -31,33 +31,13 @@
     <div class="row">
       <div class="card-body card-work__body p-0">
         <div class="row">
-          <div class="col-4 p-0">
+          <div *ngFor="let work of workList" class="col-4 p-0">
             <button
               type="button"
               class="btn btn-light btn-lg rounded-0 h-100 w-100"
             >
               <p class="card-work__subtitle mb-2 ls-1 fs-6 py-3">
-                {{ "Pose de cuisine" | uppercase }}
-              </p>
-            </button>
-          </div>
-          <div class="col-4 p-0">
-            <button
-              type="button"
-              class="btn btn-light btn-lg rounded-0 h-100 w-100"
-            >
-              <p class="card-work__subtitle mb-2 ls-1 fs-6 py-3">
-                {{ "Pose de terrasse bois" | uppercase }}
-              </p>
-            </button>
-          </div>
-          <div class="col-4 p-0">
-            <button
-              type="button"
-              class="btn btn-light btn-lg rounded-0 h-100 w-100"
-            >
-              <p class="card-work__subtitle mb-2 ls-1 fs-6 py-3">
-                {{ "Pose de placo-plâtre" | uppercase }}
+                {{ work | translate | uppercase }}
               </p>
             </button>
           </div>

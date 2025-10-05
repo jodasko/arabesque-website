@@ -9,7 +9,7 @@ export class SectionWorkComponent implements OnInit {
   bgImage = 'bg-work.png';
   bgColor: string | null = null;
   title: string = 'WORK_TITLE';
-  titleLines = [];
+  workList = ['WORK_EXAMPLE_1', 'WORK_EXAMPLE_2', 'WORK_EXAMPLE_3'];
   headline: string = 'WORK_HEADLINE';
   subTitle: string = '';
   ctaButtonText = 'WORK_CTA';

@@ -12,66 +12,81 @@
   "NAV_MENU_5": "contact",
   "NAV_TAGLINE": "joinery",
 
-  "FOOTER_NAV_MENU_1": "menu 1",
-  "FOOTER_NAV_MENU_2": "menu 2",
-  "FOOTER_NAV_MENU_3": "menu 3",
-  "FOOTER_TAGLINE": "FOOTER TAGLINE",
-  "FOOTER_LOGO": "NAME LOGO",
+  "FOOTER_NAV_MENU_1": "services",
+  "FOOTER_NAV_MENU_2": "about us",
+  "FOOTER_NAV_MENU_3": "work",
+  "FOOTER_NAV_MENU_4": "gallery",
+  "FOOTER_NAV_MENU_5": "contact",
+  "FOOTER_TAGLINE": "Arabesque Joinery is led by SAYED Hassan, a Master Joiner with many years of experience. We execute bespoke projects blending artisan precision, technical discipline, and contemporary aesthetics. Contact us to bring your high-end joinery project to life.",
+  "FOOTER_LOGO": "arabesque",
   "FOOTER_ALLRIGHTS": "© all rights reserved",
-  "FOOTER_CTA": "ACTION CTA",
+  "FOOTER_AUTHOR": "created by CS Studio",
+  "FOOTER_CTA": "contact",
+  "FOOTER_SOCIAL_NETWORK_TITLE": "follow us",
+  "FOOTER_SOCIAL_NETWORK_1": "facebook",
+  "FOOTER_SOCIAL_NETWORK_2": "instagram",
+  "FOOTER_SOCIAL_NETWORK_3": "tiktok",
 
-  "HERO_TITLE": "Bespoke joinery for your home",
+  "HERO_TITLE": "Bespoke Joinery and contemporary design.",
   "HERO_TITLE_1": "Quality joinery for",
   "HERO_TITLE_2": "your home",
-  "HERO_CTA": "our services",
+  "HERO_CTA": "discover our projects",
   "HERO_LOCATION": "Located",
   "HERO_LOCATION_REGION": "in the Alpes-Maritimes",
   "HERO_LOCATION_TITLE": "Custom joinery",
 
-  "SERVICE_HEADLINE": "service",
-  "SERVICE_TITLE": "we do it best.",
+  "SERVICE_HEADLINE": "Our services ",
+  "SERVICE_TITLE": "Joinery Expertise.",
   "SERVICE_CTA": "view all services",
   "SERVICE_DETAILS": [
     {
       "img": "01.jpg",
-      "title": "Pose de cuisine",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Custom Kitchen Joinery",
+      "description": "Bespoke design and fabrication of integrated joinery. We guarantee seamless finishes and mathematically planned ergonomics.",
+      "longDescription": "From initial concept to final installation, we craft integrated kitchens and bespoke layouts that optimize every centimeter of your space. Our 20+ years of expertise guarantee seamless joints, premium finishes, and mathematical planning for perfect, durable ergonomics. We work with all wood species and high-end materials, ensuring the flawless integration of appliances and technical worktops."
     },
     {
       "img": "02.jpg",
-      "title": "Pose de fenêtre alu et PVC",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Doors, Windows & Architectural Closures",
+      "description": "Expert installation of doors and windows (Wood, Aluminum, PVC) with the millimetric precision essential for insulation and weatherproofing.",
+      "longDescription": "The proper installation of your openings is critical for your building's insulation, acoustics, and security. Whether for bespoke wooden windows, the restoration of traditional shutters, or the installation of modern aluminum and PVC profiles, we ensure absolute waterproofing and millimeter-precision installation. Our work guarantees the energy performance and longevity of your joinery fittings."
     },
     {
       "img": "03.jpg",
-      "title": "Pose de parquet intérieur",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Parquet & Technical Wood Flooring",
+      "description": "Expert installation of all parquet and wood flooring. Mastery of complex patterns and perfect subfloor preparation for maximum longevity.",
+      "longDescription": "The selection and laying of flooring define the character of a room. We are experts in installing all types of parquet (floating, glued, nailed) and technical wood floors. Our focus is on perfect subfloor preparation, the mastery of complex patterns like herringbone, and durable oiled or varnished finishes. We ensure an aesthetic result that is also a long-term structural investment."
     },
     {
       "img": "04.jpg",
-      "title": "Pose de terrasse bois",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Durable Terraces & Exterior Layouts",
+      "description": "Design and construction of decks and pergolas. Structural expertise and drainage ensure solid, durable, and weather-resistant exterior layouts.",
+      "longDescription": "Joinery doesn't stop at the door. We design and build decks, pergolas, shelters, and fences from solid or composite wood. We apply our expertise in framing and drainage techniques to guarantee maximum longevity against weather and loads. Wood selection and treatment are crucial, and we ensure impeccable structural installation for your safety and peace of mind."
     },
     {
       "img": "05.jpg",
-      "title": "Pose de placo-plâtre",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum."
+      "title": "Ceilings, Partitions & Interior Insulation",
+      "description": "Installation of Plasterboard (Drywall) and false ceilings. We ensure all framing is perfectly plumb and level, the essential foundation for quality finishing.",
+      "longDescription": "Perfect joinery and fit-out work demand perfect surface preparation. We specialize in the installation of plasterboard (drywall) for partitions, false ceilings, and interior insulation. Our expertise guarantees all metal structures (framing) are perfectly plumb and level, a crucial step before any paint, tile, or finishing joinery. We provide the quality foundation necessary for the overall success of your project."
     }
   ],
 
   "ABOUT_HEADLINE": "About arabesque",
-  "ABOUT_SUBTITLE": "sayed hassan, menuisier",
-  "ABOUT_CONTENT": "We're innovating the way companies reinvent their office spaces for the remote workforce.",
+  "ABOUT_SUBTITLE": "sayed hassan, Master Joiner",
+  "ABOUT_CONTENT": "Joinery isn't a job, it's a discipline. Every millimeter matters to the longevity of your project.",
   "ABOUT_CARD_TITLE": "sayed hassan",
   "ABOUT_CARD_TITLE_1": "sayed",
   "ABOUT_CARD_TITLE_2": "hassan",
-  "ABOUT_CARD_CONTENT_1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris accumsan urna eu pharetra elementum. Suspendisse potenti.",
-  "ABOUT_CARD_CONTENT_2": "Vestibulum ut quam luctus, pharetra dui sed, rutrum felis. Vestibulum tellus ipsum, rhoncus sed suscipit a, eleifend in.",
+  "ABOUT_CARD_CONTENT_1": "For over many years, I've dedicated my expertise to high-end construction and renovation projects. My approach is built on a triple discipline: technical mastery of wood, impeccable mathematical precision to guarantee structural integrity, and a sharp eye for detail in every finish. For me, joinery is the art of seamlessly integrating function and aesthetics to create lasting, beautiful spaces.",
+  "ABOUT_CARD_CONTENT_2": "My years of experience allow me to view a project holistically, from the foundation to the final cut. I collaborate closely with architects and other trades, ensuring clear, fluid communication in French, and Arabic. Whether restoring a heritage façade or installing a complex, contemporary kitchen, my commitment is absolute: to deliver work where the quality is evident in every touch and sightline.",
   "ABOUT_CARD_FOOT": "antibes - alpes maritimes",
 
   "WORK_HEADLINE": "Explore our work",
   "WORK_TITLE": "See what we can do together.",
-  "WORK_CTA": "View All Projects",
+  "WORK_EXAMPLE_1": "kitchen",
+  "WORK_EXAMPLE_2": "wood decking",
+  "WORK_EXAMPLE_3": "plasterboard",
+  "WORK_CTA": "view all projects",
 
   "GALLERY_TITLE": "Gallery",
   "GALLERY_IMAGES_DETAILS": [

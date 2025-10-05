@@ -24,7 +24,7 @@
     border-radius: 0; /* per your design */
     filter: grayscale(0%);
     transition: filter 0.4s ease, transform 0.4s ease;
-    background: #000; /* avoids white flash on slow loads */
+    background: transparent; /* avoids white flash on slow loads */
 
     @include bp.up(lg) {
       filter: grayscale(100%);
